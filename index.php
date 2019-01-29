@@ -12,4 +12,6 @@ and open the template in the editor.
   <body>
     bienvenue sur le site LO07_2019 qui est rattaché à un github ....
   </body>
-</html>
+  
+  
+</html>   
