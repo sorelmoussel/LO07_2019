@@ -7,11 +7,9 @@ and open the template in the editor.
 <html>
   <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Bonjour Marc </title>
   </head>
   <body>
-    <?php
-    // put your code here
-    ?>
+    bienvenue sur le site LO07_2019 qui est rattaché à un github ....
   </body>
 </html>
