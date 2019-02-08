@@ -1,0 +1,90 @@
+/*
+
+jeudi 7 février 2019
+correction du tp01 de lo07
+
+*/
+
+/* ===== Sélecteur de type (niveau balise) */
+
+h1 {
+  color: navy;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: red;  
+}
+
+a:link {
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  background-color: greenyellow;
+}
+
+a:active { 
+}
+  
+/* ===== héritage (l'ensemble des sous-balises change de couleur) */
+
+ol {
+  color: chocolate;
+}
+
+
+/* ===== Sélecteur de classe (qui l'emporte sur le sélecteur global ol') */
+
+
+
+.cs {
+  color: crimson;
+  
+}
+
+.tm {
+  color: blueviolet;
+}
+
+/* ===== Sélecteur d'identifiant */
+
+li {
+  color: cornflowerblue;
+}
+
+#nom {
+  text-decoration: underline;
+}
+
+/* ===== Sélecteur contextuel */
+
+ol li {
+  list-style-type: lower-greek;
+}
+
+/* ===== span */
+
+.gras {
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+
+/* 
+===== div et faire disparaitre le div complet  
+
+div autour de la table des matieres
+
+*/
+
+#matiere {
+  background-color: salmon;
+  display: none;
+
+}
