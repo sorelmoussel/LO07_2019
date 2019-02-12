@@ -31,7 +31,7 @@ a:hover {
 
 a:active { 
 }
-  
+
 /* ===== héritage (l'ensemble des sous-balises change de couleur) */
 
 ol {
@@ -45,7 +45,7 @@ ol {
 
 .cs {
   color: crimson;
-  
+
 }
 
 .tm {
@@ -87,4 +87,66 @@ div autour de la table des matieres
   background-color: salmon;
   display: none;
 
+}
+
+/* tableau */
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  width: 60%;
+
+}
+
+th  {
+  border: 1px solid black;
+  text-align: center;
+  color: blue;
+  height: 20px;
+  padding: 15px;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  padding:15px;
+  background-color: peachpuff;
+}
+
+/* la page et les boites */
+
+#boite1 {
+  width: 100%;
+  height: 60px;
+  border: 1px solid black;
+}
+
+#bligne {
+  width: 100%;
+  height: 60px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#boite2, #bimage, #boite3 {
+  display: inline-block;
+  width: 30%;
+  height: 50px;
+  border: 1px solid red;
+}
+
+
+#boite4 {
+  width: 100%;
+  height: 60px;
+  border: 3px solid black;
+}
+
+
+#boite5 {
+  width: 10%;
+  height: 20px;
+  text-align: center;
+  border: 2px solid red;
 }
