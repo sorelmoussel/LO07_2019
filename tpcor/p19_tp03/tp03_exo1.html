@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Présentation du programme ISI de l'UTT</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="bootstrap337/css/bootstrap.css" rel="stylesheet"/>
@@ -148,7 +148,13 @@ and open the template in the editor.
             <button class="btn btn-danger">MSI <span class="badge text-success">40</span></button>
 
 
-            <!-- Ajout de panneaux  .-->      
+            <!-- Ajout de panneaux  .-->   
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Utilisation de panneaux (panel)</h3>
+                </div>
+                <div class="panel-body">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.</div>
+            </div> 
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -182,11 +188,11 @@ and open the template in the editor.
             </div>     
 
 
-            
+
             <!-- Utilisation de la grille de présentation ...-->
-            
-            
-            
+
+
+
             <ul>
                 <li><a href="http://www.electro-info.ovh/index.php?id=221">P1</a></li>
                 <li><a href="http://www.licence.elec.upmc.fr/S_tec/coursEnLigne/css3/tp/bootstrap/exercice_adaptatif_corrige.html">p2</a></li>
@@ -194,9 +200,265 @@ and open the template in the editor.
                 <li>https://www-inf.telecom-sudparis.eu/COURS/CSC4101/tp-04/</li>
                 <li>http://prof.bpesquet.fr/tutoriel/premiers-pas-framework-bootstrap/</li>
                 <li>http://src.iut-troyes.univ-reims.fr/~fmeuzeret/vrac/docs/m2206p~tp_bootstrap.pdf</li>
-                
+
             </ul>
-            
+
+
+            <!--  card -->
+            <p/>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Utilisation de card avec une image</h3>
+                </div>
+                <div class="panel-body">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.</div>
+            </div> 
+
+
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/mpl.jpg" alt="MPL image" width="150">
+                        <div class="card-body">
+                            <h5 class="card-title">MPL</h5>
+                            <p class="card-text">management de projets logiciels (MPL) : gérer une équipe de création logicielle en s’assurant de la 
+                                satisfaction du client et du respect des coûts et des délais</p>
+                        </div>
+                    </div> 
+
+                </div>
+
+                <!-- ============================= -->
+
+                <div class="col-sm-3">
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/msi.jpg" alt="MSI image" width="150">
+                        <div class="card-body">
+                            <h5 class="card-title">MSI</h5>
+                            <p class="card-text">Management des systèmes d’information (MSI) : combiner l’informatique et 
+                                l’analyse des processus de travail pour résoudre des problèmes organisationnels grâce aux technologies de l’information</p>
+                        </div>
+                    </div> 
+
+
+                </div>
+
+                <!-- ============================= -->
+                <div class="col-sm-3">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/mcs.jpg" alt="MPL image" width="150">
+                        <div class="card-body">
+                            <h5 class="card-title">MPL</h5>
+                            <p class="card-text">Management de la cybersécurité (MCS), 100% en alternance (contrat de professionnalisation) :
+                                assurer la sécurité des systèmes d’information avec ses implications techniques, organisationnelles, juridiques et humaines.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+
+
+            <!-- Utilisation de tableaux -->
+
+            <p/>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Utilisation de tableaux</h3>
+                </div>
+                <div class="panel-body">Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class .table to any table, then extend with custom styles or our various included modifier classes.</div>
+            </div> 
+
+
+
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">MPL</th>
+                        <th scope="col">MSI</th>
+                        <th scope="col">MCS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">CS</th>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item">IF10</li>
+                                <li class="list-group-item">IF05</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item">IF15</li>
+                                <li class="list-group-item">IF19</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item">MCS1</li>
+                                <li class="list-group-item">MCS8</li>
+                            </ul>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">TM</th>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item">IF16</li>
+                                <li class="list-group-item">IF17</li>
+                                <li class="list-group-item">IF26</li>
+                                <li class="list-group-item">IF11</li>
+                                <li class="list-group-item">LO10</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item">IF16</li>
+                                <li class="list-group-item">IF17</li>
+                                <li class="list-group-item">IF20</li>
+                                <li class="list-group-item">IF22</li>
+                                <li class="list-group-item">IF24</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="list-group">
+                                <li class="list-group-item">MCS2</li>
+                                <li class="list-group-item">MCS3</li>
+                                <li class="list-group-item">MCS4</li>
+                                <li class="list-group-item">MCS5</li>
+                                <li class="list-group-item">MCS6</li>
+                                <li class="list-group-item">MCS7</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- Utilisation de tableaux -->
+
+            <p/>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Utilisation de formulaire</h3>
+                </div>
+                <div class="panel-body">Bootstrap’s form controls expand on our Rebooted form styles with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+
+                    Be sure to use an appropriate type attribute on all inputs (e.g., email for email address or number for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+
+                    Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</div>
+            </div> 
+
+
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group">
+                    <label for="formControlRange">Example Range input</label>
+                    <input type="range" class="form-control-range" id="formControlRange">
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                    <label class="form-check-label" for="defaultCheck2">
+                        Disabled checkbox
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Default radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Second default radio
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        Disabled radio
+                    </label>
+                </div>
+
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
 
 
         </div>       
