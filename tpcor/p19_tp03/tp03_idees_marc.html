@@ -83,7 +83,7 @@ and open the template in the editor.
 
             <div class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Module LO07</a>
+                    <a class="navbar-brand" href="#">Module LO07XXX</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"> <a href="#">TCBR</a></li>
@@ -91,19 +91,12 @@ and open the template in the editor.
                     <li class="active"> <a href="#">Capsules</a> </li> 
                     <li class="active"> <a href="#">TPE</a> </li>                     
                     <li class="active"> <a href="#">Stages</a> </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-                            <span class="nav-label">Semestre à l'étranger</span> 
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">USA</a></li>
-                            <li><a href="#">EUROPE</a></li>
-                            <li><a href="#">ASIE</a></li>
-                        </ul>
-                    </li>
                 </ul>
+
+
+
+
+
 
                 <!-- travailler avec le rep bt337. Accès au rep font automatique ....-->
 
@@ -354,110 +347,101 @@ and open the template in the editor.
 
 
 
-            <form>
+            <form role="form">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label for="nom">Nom ?</label>
+                    <input type="text" class="form-control" id="nom"  placeholder="Donnez votre nom">
                 </div>
+
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="prenom">Prénom ?</label>
+                    <input type="text" class="form-control" id="prenom"  placeholder="Donnez votre prénom">
                 </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                <div class="form-group">
+                    <label for="email">Email ?</label>
+                    <input type="email" class="form-control" id="email" placeholder="Donnez votre Email">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+                <div class="form-group">
+                    <label for="date">Date de naissance ?</label>
+                    <input type="date" class="form-control" id="date_naissance" placeholder="Donnez votre date de naissance">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Sexe ? </label>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexe" id="sexeM" value="M">
+                        <label class="form-check-label" for="sexeM">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexe" id="sexeF" value="F">
+                        <label class="form-check-label" for="sexeF">F</label>
+                    </div>
+                </div>
 
 
-            <form>
                 <div class="form-group">
-                    <label for="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="origine">Origine des étudiants </label>
+                    <select class="form-control" id="origine">
+                        <option>TC de l'UTT</option>
+                        <option>DUT info</option>
+                        <option>DUT GE2I</option>
+                        <option>DUT STID</option>
+                        <option>DUT autre</option>
+                        <option>Prepa Scientifiques </option>
+                        <option>Prépa B/L</option>
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="origine">Validations ?</label>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="ST07" id="ST07">
+                        <label class="form-check-label" for="ST07">ST07</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="ST09" id="ST09">
+                        <label class="form-check-label" for="ST09">ST09</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="ST10" id="ST10" disabled>
+                        <label class="form-check-label" for="ST10">ST10 (désactivé)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="SE" id="SE">
+                        <label class="form-check-label" for="SE">SE</label>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="origine">Modules ?</label>
+                    <select class="form-control" id="modules" multiple size="9">
+                        <optgroup label="CS">
+                            <option>GL02</option>
+                            <option>NF16</option>
+                            <option>NF20</option>
+                        </optgroup>
+                        <optgroup label="TM">
+                            <option>IF09</option>
+                            <option>IF14</option>
+                            <option>LO02</option>
+                            <option>NF21</option>
+                        </optgroup>
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </form>
-
-            <form>
-                <div class="form-group">
-                    <label for="formControlRange">Example Range input</label>
-                    <input type="range" class="form-control-range" id="formControlRange">
+                    <label for="textarea">Informations complémentaires</label>
+                    <textarea class="form-control" id="textarea" rows="5"></textarea>
                 </div>
 
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Default checkbox
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-                    <label class="form-check-label" for="defaultCheck2">
-                        Disabled checkbox
-                    </label>
-                </div>
-
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Default radio
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Second default radio
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-                    <label class="form-check-label" for="exampleRadios3">
-                        Disabled radio
-                    </label>
-                </div>
-
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-                    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-                </div>
 
                 <button class="btn btn-primary" type="submit">Submit form</button>
+
             </form>
 
 
