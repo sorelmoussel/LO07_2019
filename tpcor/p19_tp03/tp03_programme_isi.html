@@ -9,41 +9,18 @@ and open the template in the editor.
         <title>Présentation du programme ISI de l'UTT</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="bootstrap337/css/bootstrap.css" rel="stylesheet"/>
+        <link href="bootstrap.css" rel="stylesheet"/>
     </head>
 
 
     <body>
         <div class="container">
 
-            <div class="navbar navbar-default">
-                <ul class="nav navbar-nav">
-                    <li class="active"> <a href="#">TCBR</a></li>
-                    <li class="active"> <a href="#">Filières</a> </li>
-                    <li class="active"> <a href="#">Capsules</a> </li> 
-                    <li class="active"> <a href="#">TPE</a> </li>                     
-                    <li class="active"> <a href="#">Stages</a> </li>
-                    <li class="active"> <a href="#">Semestre à l'étranger</a> </li>                    
-                </ul>
-            </div>
+            <!-- ===================================================== -->
+            <!-- Barre de menu -->
+            <!-- ===================================================== -->           
 
-
-            <!-- barre avec un fond noir  -->
-
-            <div class="navbar navbar-inverse">
-                <ul class="nav navbar-nav">
-                    <li class="active"> <a href="#">TCBR</a></li>
-                    <li class="active"> <a href="#">Filières</a> </li>
-                    <li class="active"> <a href="#">Capsules</a> </li> 
-                    <li class="active"> <a href="#">TPE</a> </li>                     
-                    <li class="active"> <a href="#">Stages</a> </li>
-                    <li class="active"> <a href="#">Semestre à l'étranger</a> </li>   
-                </ul>
-            </div>
-
-            <!-- un titre dans la barre  -->
-
-            <div class="navbar navbar-inverse">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Module LO07</a>
                 </div>
@@ -53,74 +30,52 @@ and open the template in the editor.
                     <li class="active"> <a href="#">Capsules</a> </li> 
                     <li class="active"> <a href="#">TPE</a> </li>                     
                     <li class="active"> <a href="#">Stages</a> </li>
-                    <li class="active"> <a href="#">Semestre à l'étranger</a> </li>   
+                    <li class="active"> <a href="#">SE</a> </li>   
                 </ul>
-            </div>  
+            </nav> 
+            <!-- Un espace vertical --> 
+            <div class="col-xs-12" style="height:80px"> </div>
 
-            <!-- fixer la barre en top   -->
 
-            <!-- bilan la 3eme barre est au top maintenant (migration)  -->
+            <!-- ===================================================== -->
+            <!-- Jumbotrom -->
+            <!-- ===================================================== -->
 
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Module LO07</a>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Utilisation d'un Jumbotron (cet élément est un panel-succes).</h3>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"> <a href="#">TCBR</a></li>
-                    <li class="active"> <a href="#">Filières</a> </li>
-                    <li class="active"> <a href="#">Capsules</a> </li> 
-                    <li class="active"> <a href="#">TPE</a> </li>                     
-                    <li class="active"> <a href="#">Stages</a> </li>
-                </ul>
-            </div>
-
-            <div>
-                bonjour
-            </div>
-
-
-            <!-- formulaire de recherche   -->
-
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Module LO07</a>
+                <div class="panel-body">
+                    Le jumbotron est un composant de Bootstrap. Il affiche un bloc situé en haut de la page d'un site. 
+                    Ce bloc est plus large que le reste de la page. Le but est d'attirer l'attention de l'utilisateur 
+                    sur un élément particulier. Ce bloc est gris par défaut, mais il est possible de le modifier grâce 
+                    au CSS et à JavaScript pour qu'il puisse contenir une image située en arrière-plan.
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"> <a href="#">TCBR</a></li>
-                    <li class="active"> <a href="#">Filières</a> </li>
-                    <li class="active"> <a href="#">Capsules</a> </li> 
-                    <li class="active"> <a href="#">TPE</a> </li>                     
-                    <li class="active"> <a href="#">Stages</a> </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-                            <span class="nav-label">Semestre à l'étranger</span> 
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">USA</a></li>
-                            <li><a href="#">EUROPE</a></li>
-                            <li><a href="#">ASIE</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <!-- travailler avec le rep bt337. Accès au rep font automatique ....-->
-
-                <form class="navbar-form navbar-right inline-form">
-                    <div class="form-group">
-                        <input type="search" class="input-sm form-control" placeholder="Recherche">
-                        <button type="submit" class="btn btn-primary btn-sm">
-                            <span class="glyphicon glyphicon-eye-open"></span>
-                            Chercher
-                        </button>
-                    </div>
-                </form>
             </div> 
 
-            <!-- Mise en place d'une pagination .-->            
+            <div class="jumbotron">
+                <h1>Programme ISI de l'UTT </h1>
+                <p>Le programme ISI de l'UTT dispose actuellement de trois filières MPL, MSI et MCS ...</p>
+            </div>
 
-            <div class="container">
+            <!-- ===================================================== -->
+            <!-- Mise en place d'une pagination -->
+            <!-- ===================================================== -->
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mise en place d'une pagination</h3>
+                </div>
+                <div class="panel-body">
+                    We use a large block of connected links for our pagination, making links hard to miss and 
+                    easily scalable—all while providing large hit areas. Pagination is built with list HTML elements
+                    so screen readers can announce the number of available links. Use a wrapping "nav" element to
+                    identify it as a navigation section to screen readers and other assistive 
+                    technologies.
+                </div>
+            </div> 
+
+            <nav aria-label="Page navigation example">
                 <ul class="pagination  pagination-lg">
                     <li><a href="#">TCBR</a></li>
                     <li><a href="#">FIL</a></li>
@@ -129,88 +84,104 @@ and open the template in the editor.
                     <li><a href="#">Stages</a></li>
                     <li><a href="#">SE</a></li>
                 </ul>
-            </div>
+            </nav>
 
-
-            <!-- Ajout d'un Jumbotrom  .-->             
-
-            <h1>Programme ISI de l'UTT</h1>
-            <div class="jumbotron">
-                <h1>ISI</h1>
-                <p>Filières MPL, MSI, MRI et MCS ...</p>
-            </div>
-
-
-            <!-- Ajout de bouton et de bouton avec des badges .. .-->      
-
-            <button class="btn btn-danger">MPL</button>
-
-            <button class="btn btn-danger">MSI <span class="badge text-success">40</span></button>
-
-
-            <!-- Ajout de panneaux  .-->   
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Utilisation de panneaux (panel)</h3>
-                </div>
-                <div class="panel-body">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.</div>
-            </div> 
+            <!-- ===================================================== -->
+            <!-- Mise en place de bouton avec des badges .. -->
+            <!-- ===================================================== -->
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Titre</h3>
+                    <h3 class="panel-title">Mise en place de bouton avec des badges</h3>
                 </div>
-                <div class="panel-body">Contenu</div>
-            </div>
-            <div class="panel panel-success">
+                <div class="panel-body">
+                    Je vous propose de découvrir les badges de Bootstrap. Ils pourront être utiles pour afficher et mettre en avant une valeur numérique.
+                    Pour les utiliser, il faut tout simplement utiliser la classe : .badge
+                </div>
+            </div> 
+
+            <!-- Ajout de bouton et de bouton avec des badges .. .-->      
+
+            <button class="btn btn-success">MPL</button>
+            <button class="btn btn-danger">MSI <span class="badge text-success">30</span></button>
+            <button class="btn btn-warning">MCS <span class="badge text-success">8</span></button>
+
+            <p/>
+
+
+            <!-- ===================================================== -->
+            <!-- Mise en place de grilles de présentation -->
+            <!-- ===================================================== -->
+
+            <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Titre</h3>
+                    <h3 class="panel-title">Mise en place de grilles de présentation</h3>
                 </div>
-                <div class="panel-body">Contenu</div>
+                <div class="panel-body">
+                    Le système de grille est le coeur de Bootstrap qui considère qu'une ligne "row" fait 12 colonnes. 
+                </div>
+            </div> 
+
+            <!-- 3 colonnes  ...-->
+            <h4>Grille de 3 colonnes (lg-4)</h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4">
+                        Col 1 
+                    </div>
+                    <div class="col col-lg-4">
+                        Col 2
+                    </div>
+                    <div class="col col-lg-4">
+                        Col 3
+                    </div>
+                </div>
+
             </div>
-            <div class="panel panel-warning">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Titre</h3>
+
+            <!-- 3 colonnes  ...-->
+            <h4>Grille de 2 et 3 colonnes </h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4">
+                        1 of 2
+                    </div>
+                    <div class="col col-lg-8">
+                        2 of 2
+                    </div>
                 </div>
-                <div class="panel-body">Contenu</div>
+
+                <div class="row">
+                    <div class="col col-lg-2">
+                        1 of 3
+                    </div>
+                    <div class="col col-lg-4">
+                        2 of 3
+                    </div>
+                    <div class="col col-lg-6">
+                        3 of 3
+                    </div>
+                </div>
             </div>
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Titre</h3>
-                </div>
-                <div class="panel-body">Contenu</div>
-            </div>
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Titre</h3>
-                </div>
-                <div class="panel-body">Contenu</div>
-            </div>     
 
+            <p/><br/><p/>
 
+            <!-- ===================================================== -->
+            <!-- Mise en place cards  -->
+            <!-- ===================================================== -->
 
-            <!-- Utilisation de la grille de présentation ...-->
-
-
-
-            <ul>
-                <li><a href="http://www.electro-info.ovh/index.php?id=221">P1</a></li>
-                <li><a href="http://www.licence.elec.upmc.fr/S_tec/coursEnLigne/css3/tp/bootstrap/exercice_adaptatif_corrige.html">p2</a></li>
-                <li>http://www.bonneville.nom.fr/enseignement/ihm/tp-n9-bootstrap-1-174.htm</li>
-                <li>https://www-inf.telecom-sudparis.eu/COURS/CSC4101/tp-04/</li>
-                <li>http://prof.bpesquet.fr/tutoriel/premiers-pas-framework-bootstrap/</li>
-                <li>http://src.iut-troyes.univ-reims.fr/~fmeuzeret/vrac/docs/m2206p~tp_bootstrap.pdf</li>
-
-            </ul>
-
-
-            <!--  card -->
             <p/>
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Utilisation de card avec une image</h3>
                 </div>
-                <div class="panel-body">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.</div>
+                <div class="panel-body">A card is a flexible and extensible content container. It includes options for 
+                    headers and footers, a wide variety of content, contextual background colors, and powerful display
+                    options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar
+                    functionality to those components is available as modifier classes for cards.
+                </div>
             </div> 
 
 
@@ -257,9 +228,9 @@ and open the template in the editor.
                 </div>
             </div>
 
-
-
+            <!-- ===================================================== -->
             <!-- Utilisation de tableaux -->
+            <!-- ===================================================== -->
 
             <p/>
             <div class="panel panel-danger">
@@ -338,7 +309,12 @@ and open the template in the editor.
                 </tbody>
             </table>
 
-            <!-- Utilisation de tableaux -->
+
+
+            <!-- ===================================================== -->
+            <!-- Utilisation de formulaire -->
+            <!-- ===================================================== -->
+
 
             <p/>
             <div class="panel panel-success">
@@ -393,7 +369,7 @@ and open the template in the editor.
                     <label for="origine">Origine des étudiants </label>
                     <select class="form-control" id="origine">
                         <option>TC de l'UTT</option>
-                        <option>DUT info</option>
+                        <option>DUT INFO</option>
                         <option>DUT GE2I</option>
                         <option>DUT STID</option>
                         <option>DUT autre</option>
@@ -452,6 +428,7 @@ and open the template in the editor.
             </form>
 
 
-        </div>       
+        </div>   
+
     </body>
 </html>
