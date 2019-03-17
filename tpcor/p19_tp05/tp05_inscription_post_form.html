@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+
+<!--
+valeurs possibles pour le champ action
+
+tp05_inscription_get_action.php
+tp05_analyse_formulaire.php
+tp05_analyse_formulaire2.php
+-->
+
+<html>
+    <head>
+        <title>Présentation du programme ISI de l'UTT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap.css" rel="stylesheet"/>
+        <link href="tp05_css.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+
+    <body>
+        <div class="container">
+
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">tp05_inscription_post_form.html</h3>
+                </div>
+                <div class="panel-body">Formulaire d'inscription (méthode post)</div>
+            </div> 
+
+
+            <form role="form" method='post' action='tp05_analyse_formulaire2.php'>
+                <div class="form-group">
+                    <label for="nom">Nom ?</label>
+                    <input type="text" class="form-control" name="nom" placeholder="Donnez votre nom" value="Musk">
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom ?</label>
+                    <input type="text" class="form-control" name="prenom"  placeholder="Donnez votre prénom" value="Elon">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email ?</label>
+                    <input type="email" class="form-control" name="email" placeholder="Donnez votre Email" value="elon.musk@utt.fr">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date de naissance ?</label>
+                    <input type="date" class="form-control" name="date_naissance" placeholder="Donnez votre date de naissance" value="1960-01-01">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Sexe ? </label><br/>
+                    <label class="radio-inline">
+                        <input type="radio" name="sexe" id="inlineRadio1" checked="checked" value="M">Masculin
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="sexe" id="inlineRadio2" value="F">Féminin
+                    </label>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="origine">Origine des étudiants </label>
+                    <select class="form-control" name="origine">
+                        <option>TC de l'UTT</option>
+                        <option>DUT INFO</option>
+                        <option>DUT GE2I</option>
+                        <option selected>DUT STID</option>
+                        <option>DUT autre</option>
+                        <option>Prepa Scientifiques </option>
+                        <option>Prépa B/L</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="origine">Validations ?</label>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" checked value="ST07" name="ST07">
+                        <label class="form-check-label" for="ST07">ST07</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="ST09" name="ST09">
+                        <label class="form-check-label" for="ST09">ST09</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" value="ST10" name="ST10" disabled>
+                        <label class="form-check-label" for="ST10">ST10 (désactivé)</label>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-check-input" type="checkbox" checked value="SE" name="SE">
+                        <label class="form-check-label" for="SE">SE</label>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="origine">Modules ?</label>
+                    <select class="form-control" name="modules[]" multiple size="9">
+                        <optgroup label="CS">
+                            <option selected>GL02</option>
+                            <option>NF16</option>
+                            <option selected>NF20</option>
+                        </optgroup>
+                        <optgroup label="TM">
+                            <option>IF09</option>
+                            <option>IF14</option>
+                            <option selected>LO02</option>
+                            <option>NF21</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="textarea">Informations complémentaires</label>
+                    <textarea class="form-control" name="textarea" rows="3">Bonjour ...</textarea>
+                </div>
+
+
+                <button class="btn btn-primary" type="submit">Submit form</button>
+
+                <p/>
+
+            </form>
+
+
+        </div>   
+
+    </body>
+</html>
