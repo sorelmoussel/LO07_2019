@@ -45,8 +45,65 @@ $titre = "tp05_inscription_post_action.php";
                     <tr><td>date_naissance</td><td><?php echo ($_POST['date_naissance']) ?></td></tr>
                     <tr><td>sexe</td><td><?php echo ($_POST['sexe']) ?></td></tr>
                     <tr><td>origine</td><td><?php echo ($_POST['origine']) ?></td></tr>
-                    <tr><td>ST07</td><td><?php echo ($_POST['ST07']) ?></td></tr>
-                    <tr><td>SE</td><td><?php echo ($_POST['SE']) ?></td></tr>
+                    
+                    
+ <tr>
+                        <td>ST07</td>
+                        <td>
+                            <?php
+                            if (isset($_POST['ST07']))
+                                echo "oui";
+                            else
+                                echo "non";
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ST09</td>
+                        <td>
+                            <?php
+                            if (isset($_POST['ST09']))
+                                echo "oui";
+                            else
+                                echo "non";
+                            ?>
+                        </td>
+                    </tr>         
+                    <tr>
+                        <td>ST10</td>
+                        <td>
+                            <?php
+                            if (isset($_POST['ST10']))
+                                echo "oui";
+                            else
+                                echo "non";
+                            ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SE</td>
+                        <td>
+                            <?php
+                            if (isset($_POST['SE']))
+                                echo "oui";
+                            else
+                                echo "non";
+                            ?>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>modules</td>
+                        <td>
+                            <?php
+                            $listeModules = $_POST['modules'];
+                            $resultat = implode(", ", $listeModules);
+                            echo ($resultat);
+                            ?>
+                        </td>
+                    </tr>
+                    
+                    
                     <tr>
                         <td>modules</td>
                         <td>
