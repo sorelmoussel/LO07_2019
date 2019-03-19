@@ -4,7 +4,6 @@
 $titre = "tp05_inscription_post_action.php";
 ?>
 
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -45,9 +44,9 @@ $titre = "tp05_inscription_post_action.php";
                     <tr><td>date_naissance</td><td><?php echo ($_POST['date_naissance']) ?></td></tr>
                     <tr><td>sexe</td><td><?php echo ($_POST['sexe']) ?></td></tr>
                     <tr><td>origine</td><td><?php echo ($_POST['origine']) ?></td></tr>
-                    
-                    
- <tr>
+
+
+                    <tr>
                         <td>ST07</td>
                         <td>
                             <?php
@@ -102,12 +101,12 @@ $titre = "tp05_inscription_post_action.php";
                             ?>
                         </td>
                     </tr>
-                    
-                    
+
+
                     <tr>
                         <td>modules</td>
                         <td>
-                            <?php 
+                            <?php
                             $listeModules = $_POST['modules'];
                             $resultat = implode(", ", $listeModules);
                             echo ($resultat);
