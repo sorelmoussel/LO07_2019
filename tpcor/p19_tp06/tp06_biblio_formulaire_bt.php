@@ -13,15 +13,6 @@ function form_begin($class, $method, $action) {
 }
 
 // --------------------------------------------------
-// form_end
-// --------------------------------------------------
-
-function form_end() {
-    echo ("<!-- form_end -->\n");
-    printf("</form>\n");
-}
-
-// --------------------------------------------------
 // form_input_text
 // --------------------------------------------------
 
@@ -34,6 +25,16 @@ function form_input_text($label, $name, $size, $value) {
     echo (" <input type='text' class='form-control' name='$name' size='$size' value='$value' >");
     echo ("</div>");
 }
+
+// --------------------------------------------------
+// form_end
+// --------------------------------------------------
+
+function form_end() {
+    echo ("<!-- form_end -->\n");
+    printf("</form>\n");
+}
+
 
 // --------------------------------------------------
 // form_select
