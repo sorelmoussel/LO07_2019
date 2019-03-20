@@ -5,7 +5,6 @@ $titre = "tp06_tournoi_form2.php";
 $nombre_joueurs = $_GET['nbejoueur'];
 ?>
 
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -15,7 +14,6 @@ $nombre_joueurs = $_GET['nbejoueur'];
         <title><?php echo $titre; ?></title>
     </head>
     <body>
-
         <div class="container">
             <div class="panel panel-success">
                 <div class="panel-heading">
@@ -34,24 +32,18 @@ $nombre_joueurs = $_GET['nbejoueur'];
                 echo ("Joueur " . $indice);
                 echo ("   </h3>");
                 echo (" </div>");
-
                 $name = "nom_" . $indice;
                 form_input_text("nom", $name, 20, "");
-
                 $name = "prenom_" . $indice;
                 form_input_text("prenom", $name, 20, "");
-
                 $name = "email_" . $indice;
                 form_input_text("email", $name, 20, "");
-
                 echo ("</div>");
             }
-
             form_input_reset("effacer");
             form_input_submit("envoyer");
             form_end();
             ?>
         </div>
-
     </body>
 </html>
