@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-
 <?php
 include ('tp06_biblio_formulaire_bt.php');
 include ('tp06_biblio_planning.php');
-
 $titre = "tp6_planning_form.php";
-$liste = array("marc", "ludo", "severine", "chaima");
 ?>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -17,14 +13,12 @@ $liste = array("marc", "ludo", "severine", "chaima");
         <title><?php echo $titre; ?></title>
     </head>
     <body>
-
         <div class="container">
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <h3 class="panel-title"><?php echo $titre; ?></h3>
                 </div>
             </div> 
-
             <?php
             form_begin("lo07", "get", "tp06_planning_action.php");
             form_select("JourLabel", "jourlabel", "", 5, listeJourLabel());
@@ -33,7 +27,7 @@ $liste = array("marc", "ludo", "severine", "chaima");
             form_select("Séance", "seance", "multiple", 6, listeSeance());
             form_input_reset("effacer");
             form_input_submit("envoyer");
-            form_end();_
+            form_end();
             ?>
         </div>
 

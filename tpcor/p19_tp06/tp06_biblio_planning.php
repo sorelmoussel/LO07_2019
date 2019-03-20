@@ -27,7 +27,7 @@ function listeMois() {
 
 function listeSeance() {
     $heure = array("08", "09", "10", "11", "14", "15", "16", "17");
-    $minute = array("h00", "h30");
+    $minute = array("h00", "h20", "h40");
     $res = array();
     foreach ($heure as $h) {
         foreach ($minute as $m) {
