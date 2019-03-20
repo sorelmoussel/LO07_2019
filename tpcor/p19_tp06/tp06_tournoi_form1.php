@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
 <?php
 include ('tp06_biblio_formulaire_bt.php');
-include ('tp06_biblio_planning.php');
-
-$titre = "tp6_planning_form.php";
-$liste = array("marc", "ludo", "severine", "chaima");
+$titre = "tp06_tournoi_form1.php";
 ?>
 
 <html>
@@ -26,14 +22,11 @@ $liste = array("marc", "ludo", "severine", "chaima");
             </div> 
 
             <?php
-            form_begin("lo07", "get", "tp06_planning_action.php");
-            form_select("JourLabel", "jourlabel", "", 5, listeJourLabel());
-            form_select("JourIndice", "jourIndice", "", 5, listeJourIndice());
-            form_select("Mois", "mois", "", 3, listeMois());
-            form_select("Séance", "seance", "multiple", 6, listeSeance());
+            form_begin("lo07", "get", "tp06_tournoi_form2.php");
+            form_select("nombre de joueurs", "nbejoueur", "", 1, range(2, 5));
             form_input_reset("effacer");
             form_input_submit("envoyer");
-            form_end();_
+            form_end();
             ?>
         </div>
 

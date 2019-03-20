@@ -17,21 +17,19 @@ $titre = "tp05_analyse_formulaire2.php";
     <body>
 
         <div class="container">
-
             <?php
-
             function cartouche($name) {
                 $panel = "<div class='panel panel-danger'>";
                 $panel .= "  <div class='panel-heading'>";
                 $panel .= "    <h3 class='panel-title'>SuperGlobale " . $name . "</h3>";
-                $panel .= "  </div>";   
+                $panel .= "  </div>";
+                $panel .= "  <div class='panel-body'>Liste des paramètres reçus</div>";
                 $panel .= "</div>";
                 return $panel;
             }
-
+            
             $superglobales = array("GET" => $_GET, "POST" => $_POST);
-
-
+            
             foreach ($superglobales as $label => $globale) {
                 if ($globale) {
 

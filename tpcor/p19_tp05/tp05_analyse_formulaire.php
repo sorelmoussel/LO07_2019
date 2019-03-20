@@ -27,9 +27,7 @@ $titre = "tp05_analyse_formulaire.php";
                 <div class="panel-heading">
                     <h3 class="panel-title">SuperGlobale GET</h3>
                 </div>
-                <div class="panel-body">Liste des paramètres reçus</div>
             </div> 
-
 
             <table class="table table-striped table-bordered">
                 <thead>

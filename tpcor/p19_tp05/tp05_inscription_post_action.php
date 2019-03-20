@@ -101,18 +101,6 @@ $titre = "tp05_inscription_post_action.php";
                             ?>
                         </td>
                     </tr>
-
-
-                    <tr>
-                        <td>modules</td>
-                        <td>
-                            <?php
-                            $listeModules = $_POST['modules'];
-                            $resultat = implode(", ", $listeModules);
-                            echo ($resultat);
-                            ?>
-                        </td>
-                    </tr>
                     <tr><td>textarea</td><td><?php echo ($_POST['textarea']) ?></td></tr>
                 </tbody>
             </table>
