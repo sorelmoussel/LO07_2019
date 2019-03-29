@@ -27,6 +27,18 @@ function form_input_text($label, $name, $size, $value) {
 }
 
 // --------------------------------------------------
+// form_input_hidden
+// --------------------------------------------------
+
+function form_input_hidden($name, $value) {
+    echo ("\n<!-- form_input_text : $label $name $size $value -->\n");
+    echo ("  <p>\n");
+    echo ("<div class='form-group'>");
+    echo (" <input type='hidden' class='form-control' name='$name' value='$value' >");
+    echo ("</div>");
+}
+
+// --------------------------------------------------
 // form_end
 // --------------------------------------------------
 

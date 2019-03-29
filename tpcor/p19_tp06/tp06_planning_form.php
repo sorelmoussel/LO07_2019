@@ -2,7 +2,7 @@
 <?php
 include ('tp06_biblio_formulaire_bt.php');
 include ('tp06_biblio_planning.php');
-$titre = "tp6_planning_form.php";
+$titre = "tp06_planning_form.php";
 ?>
 <html>
     <head>
