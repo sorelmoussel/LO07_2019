@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
+session_start();
 $titre = "analyse_superglobales.php";
-$session_start();
 ?>
 
 
@@ -45,7 +45,11 @@ $session_start();
 
                     echo ("<tbody>");
                     foreach ($globale as $cle => $valeur) {
-                        echo ("<tr><td>$cle</td><td>$valeur</td</tr>");
+                        if (is_array($valeur)) {
+                            $liste = implode (", ", $valeur);
+                            echo ("<tr><td>$cle</td><td>$liste</td</tr>");
+                        }
+                        else echo ("<tr><td>$cle</td><td>$valeur</td</tr>");
                     }
                     echo ("</tbody>");
                     echo ("</table>");
