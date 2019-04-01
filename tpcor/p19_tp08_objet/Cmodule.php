@@ -4,7 +4,11 @@
 // -----> LO07-2019 : PHP Object
 // ================================================================
 
-class Module {
+require_once 'WBcharte.php';
+require_once 'WBinterface.php';
+
+
+class Module implements WBinterface {
 
     private $sigle;
     private $label;
@@ -43,6 +47,15 @@ class Module {
         return $this->effectif;
     }
 
+    /*
+      function __construct() {
+      $sigle = "?";
+      $label = "?";
+      $categorie = "?";
+      $effectif = "?";
+      }
+     */
+
     function __construct($sigle, $label, $cat, $effectif) {
         echo "<!-- classe module : construct($sigle,$label,$cat,$effectif) -->\n";
         $this->setSigle($sigle);
@@ -75,17 +88,21 @@ class Module {
     }
 
     public function pageKO() {
-        //echo WBCcharte::html_head("Les WebBean de Marco");
+        echo WBcharte::html_head_bootstrap("Les WebBean Modules");
         echo ("<h2>Votre formulaire n'est pas correct</h2>");
         foreach ($this->listeErreurs as $key => $value) {
             echo ("$key => $value <br />\n");
         }
-//echo WBCcharte::html_foot();
     }
+        
+    public function pageFoot() {
+       echo WBcharte::html_foot_bootstrap();
+    }
+    
 
     public function pageOK() {
-//echo WBCcharte::html_head("Les WebBean de Marco");
-        echo ("<h2>Votre formualire est correct</h2>");
+        echo WBcharte::html_head_bootstrap("Les WebBean Modules");
+        echo ("<h2>Votre formulaire est correct</h2>");
         foreach ($_GET as $key => $value) {
             echo ("$key => $value <br />\n");
         }
@@ -99,7 +116,7 @@ class Module {
         return $resultat;
     }
 
-    public function sauveXML() {
+    public function sauveXML($file) {
         return "xml";
     }
 
@@ -113,4 +130,3 @@ class Module {
     }
 
 }
-

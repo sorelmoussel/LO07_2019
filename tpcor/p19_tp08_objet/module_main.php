@@ -9,7 +9,7 @@
 
 echo ("Bonjour1");
 
-require_once 'module.php';
+require_once 'Cmodule.php';
 require_once 'programme.php';
 
 echo ("Bonjour2");
