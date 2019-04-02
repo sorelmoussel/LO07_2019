@@ -1,35 +1,31 @@
 <?php
 
 class Cursus {
-
-    private $sigle;
     private $listeModules;
 
     const DATA = 'tp08_cursus';
 
-    function setSigle($valeur) {
-        $this->sigle = $valeur;
-    }
-
-    function getSigle() {
-        return $this->sigle;
-    }
-
-    function __construct($sigle) {
-        $this->sigle = $sigle;
+    function __construct() {
+        session_start();
         $this->listeModules = array();
 
         // Existe il des modules dans la variable de session 'tp08_cursus' ?
-        session_start();
-        $base = $_SESSION [DATA];
+
+        $base = $_SESSION[DATA];
         if ($base) {
             echo("construct : recuperation de la base");
             print_r($base);
             $this->listeModules = $base;
         }
+        else {
+            $module = new Module ("?", "??", "??", 0);
+            addModule($module);
+        }
+        echo ($this);
     }
 
     function addModule($module) {
+        echo ("addmodule : $module");
         $this->listeModules[$module->getSigle()] = $module;
 
         // persistance 
