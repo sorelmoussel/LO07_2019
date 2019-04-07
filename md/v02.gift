@@ -1,0 +1,1303 @@
+// =============================================================
+// QCM LO07 
+// V01 : dimanche 7 avril 2019
+
+// bareme : 2 points par question, -0,5 par erreur
+// =============================================================
+
+$CATEGORY: 190407_WEB
+
+ 
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// ----- PHP
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+ 
+// ===================================================
+::Langage PHP affectation::[html]
+Qu'affiche le script suivant ? 
+<?php
+ $res = 2 + 3 / 4;
+ print $res;
+?>
+{
+~ 1.25
+= 2.75
+~ 2
+~ 3
+}
+
+// ===================================================
+::Langage PHP affectation::[html]
+Qu'affiche le script suivant ? 
+<?php
+$res = 15;
+$Res = 10;
+$Res = $Res -7;
+print $res;
+?>
+{
+~ 3
+= 15
+~ 8
+~ 12
+}
+
+// ===================================================
+::Langage PHP affectation::[html]
+Qu'affiche le script suivant ? 
+<?php
+$a = 6;
+$b = 15;
+$c = $a;
+$a = $b;
+$b = $c;
+print "$a $b";
+?>
+{
+~ 6 6
+= 15 6
+~ 6 15
+~ 15 15
+}
+
+// ===================================================
+::Langage PHP affectation::[html]
+Qu'affiche le script suivant ? 
+<?php
+$a = "3*7";
+print $a;
+?>
+{
+~ je ne sais pas
+= 3*7
+~ 21
+~ 14
+}
+
+// ===================================================
+::Langage PHP ::[html]
+Ou sont exécutés les script PHP ?
+{
+~ je ne sais pas
+= sur un serveur Web
+~ sur le poste client de l'utlisateur
+~ sur une tablette
+~ dans le réseau via le protocole HTTP
+}
+
+// ===================================================
+::Langage PHP ::[html]
+Quelle est votre URL le notre serveur dev-isi sachant que 'login' correspond à votre login UTT ?
+{
+~ Je ne sais pas
+= http://dev-isi.utt.fr/~login
+~ http://dev-isi.utc.fr/~login
+~ http://dev-isi.utt.fr/login
+~ http://dev-isi.utt.fr/www/~login
+}
+
+// ===================================================
+::Langage PHP ::[html]
+Quelle est le nom de votre répertoire sur dev-isi sachant que 'login' correspond à votre login UTT ?
+{
+~ Je ne sais pas
+= /home/etu/login/www
+~ /var/home/login
+~ /home/etu/login
+~ /home/etu/www/login
+}
+
+
+//Role du php ?
+//Localisation des scripts php
+//Visibilité du code ?
+//Architecture C/S ?
+//Liste (resultat d’une recherche) et création
+//Affectation multiple
+//Hashtable
+//Implode
+//explode
+
+
+// ===================================================
+::Langage PHP fonction::[html]
+Qu'affiche le script suivant ? 
+function diff($val1,$val2)
+{
+ return $val2 - $val1;
+}
+$a = diff(3,-2);
+print $a;
+{
+~ je ne sais pas
+= 5
+~ 1
+~ -1
+~ -5
+}
+
+
+// ===================================================
+::Langage PHP fonction::[html]
+Qu'affiche le script suivant ? 
+function carre($val) { return $val * $val; }
+function inc($val) { return $val + 1; }
+$a = carre(inc(3));
+print $a;
+{
+= 16
+~ 9
+~ 10
+~ 12
+}
+
+
+// ===================================================
+::Langage PHP fonction::[html]
+Qu'affiche le script suivant ? 
+$a = 10;
+$b = 20;
+function addition() {
+ $res = $a + $b + 4;
+ return $res;
+}
+$c = addition();
+print ($c);
+{
+= 4
+~ 24
+~ 14
+~ 34
+}
+
+// ===================================================
+::Langage PHP fonction::[html]
+Qu'affiche le script suivant ? 
+function g($valeur) {
+ if (0 == $valeur) {
+  return 2;
+ } else {
+  return (3 + g($valeur - 1));
+ }
+}
+print (g(4));
+{
+= 14
+~ 2
+~ 3
+~ 5
+~ 8
+}
+
+
+
+
+      
+Foreach
+Print
+Print_r
+Include
+Dev-isi votre url ?
+Role de sftc ou filezilla
+Liste des superglobales
+Portée des variables (fragment, page, …)
+Compteur de visite
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// ----- FORMULAIRE
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+
+Rôle d’un formulaire
+Méthode get
+Méthode post (url construit)
+Selection d’une seule valeur parmi 2
+Selection d’une seule valeur parmi N
+Selection de plusieurs valeur parmi N  form avec [ ]
+Attribut name
+$_GET, 
+$_POST
+Champ caché
+Formulaire = fichier html ?
+Traitement de formulaire : php ou autre ?
+Image clickable 
+Transfert de fichier 
+Filtre 
+
+
+// ===================================================
+::Langage PHP formulaire::[html]
+$_FILES contient des informations sur ?
+{
+~ Je ne sais pas
+= Les fichiers uploadés via un formulaire
+~ Le fichier PHP en cours d'exécution
+~ Les fichiers contenus sur le serveur
+}
+
+
+
+
+1 _ Comment activer un champ caché de formulaire ?
+     <input field="hidden" ...     
+     <input type="hidden" ...     
+     <input type="hiden" ...     
+2 _ Comment activer un champ mot de passe de formulaire ?
+     <input type="pass_word" ...     
+     <input name="password" ...     
+     <input type="password" ...     
+3 _ Quelles est la bonne syntaxe pour un passage de deux parametres par url ?
+     <a href='lesson_14_f2_http_param.php?first_var=$var_1&second_var=$var_2'>...     
+     <a href='lesson_14_f2_http_param.php?first_var=§var_1§second_var=$var_2'>...     
+     <a href='lesson_14_f2_http_param.php?first_var=$var_1;second_var=$var_2'>...     
+4 _ Quest-ce qu'un cookie ?
+     Un fichier entièrement codé enregistré sur le serveur     
+     Un fichier texte enregistré sur le poste client     
+     Une donnée créée à la volée dans une table mysql     
+5 _ Quelles sont les 2 caractéristiques d'un cookie ?
+     Peuvent être refusés ou effacés par l'internaute     
+     Sa taille est fixe     
+     Sa durée de vie est variable     
+6 _ Quelles sont les deux caractéristiques d'une variable de session ?
+     S'efface automatiquement lorsque l'internaute quite le site     
+     Est enregistrée sur le serveur     
+     Est enregistrée sur le poste client     
+7 _ Quelle instruction permet de créer un cookie ?
+     set_cookie ($cookieName, $cookieValue,time()+10);     
+     setcookie [$cookieName, $cookieValue,time()+10];     
+     setcookie ($cookieName, $cookieValue,time()+10);     
+8 _ Dans quels tableaux système trouve-t-on les cookies (2) ?
+     $HTTP_COOKIE_VARS["cookieName"];     
+     $_COOKIE["cookieName"];     
+     $_COOKIE_VARS["cookieName"];     
+9 _ Quelle est l'informations toujours contenue dans un cookie, en plus du nom et de la valeur: ?
+     l'URL     
+     Sa date de création     
+     Sa durée de vie     
+10 _ Ou trouve-t-on les cookies sous XP ?
+     Dans le répertoire windows\cookies     
+     Dans Documents and Settings\utilisateur\cookies     
+     Dans Documents and Settings\Default User\cookies  
+
+
+
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// ----- CONTEXTE
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+
+
+Problematique 
+Url_long
+Champs cachés
+Cookie
+Cookie localisation
+Cookie superglobale
+Cookie et valeur multiple
+Valeur *cookie dans la page de pose des cookies
+session
+
+
+
+
+Quelle est la particularité de setcookie ?
+ On ne peut en faire qu'un par page
+ On ne peut pas mettre le moindre code HTML avant
+ Cela prend beaucoup de temps d'exécution
+
+
+Quelle fonction doit être obligatoirement appelée avant d'utiliser des variables de session ?
+ isset()
+ session_start()
+ start_session()
+
+
+
+1 _ Qu'est-ce qu'une session ?
+     Une consultation d'une page web     
+     Un ensemble de consultations sur le même site     
+     Un ensemble de consultations sur le même serveur     
+2 _ Pourquoi mémoriser les mots de passe et noms d'utilisateur dans une table et non dans un texte(2) ?
+     criptage plus facile     
+     accès plus rapide     
+     accès plus sécurisé     
+3 _ Quelles sont les trois phases d'un système de validation de mot de passe: ?
+     1_Valider l'entrée 2_Maintenir les droits pendant la visite 3_Supprimer après sortie     
+     1_Valider l'entrée 2_Verrouiller entre chaque page 3_Verrouiller après sortie     
+     1_Valider l'entrée 2_Maintenir les droits pendant la visite 3_Mémoriser après sortie     
+4 _ Comment veriefie-t-on les droits d'accès des pages d'un site autres que la page d'acueil ? ?
+     On vérifie le mot de passe à chaque page     
+     On utilise les variables de session     
+     On utilise les cookies     
+5 _ Quelle instruction doit-on executer avant de pouvoir manipuler des variable de session ?
+     session_enter()     
+     session_begin()     
+     session_start()     
+6 _ Quelle instruction permet de créér une variable de session ?
+     session_register(nom_de_variable)     
+     session_register[nom_de_variable]     
+     session_write(nom_de_variable)     
+7 _ Comment peut-on lire une variable de session ?
+     $HTTP_SESSION_VARS('variable_name')     
+     $HTTP_SESSION_VARS['variable_name']     
+     $_SESSION_VARS['variable_name']     
+8 _ Comment trouver les variables de session dans un serveur ?
+     session.save_path = c:/windows/temp dans php.ini     
+     session.save_path = c:/windows/temp dans config.sys     
+     session.save_handler = c:/windows/temp dans php.ini     
+9 _ Comment supprime-t-on une variable de session (2 façons) ?
+     Le serveur efface la variable automatiquement lorsque l'utilisateur quite le site     
+     Lorsque l'utilisateur rentre un mauvais mot de passe     
+     session_unregister(variable_name)     
+10 _ Quelle est la fonction d'une page de bienvenue, en plus de dire Bonjour... ?
+     laisser la temps à la variable de session de s'enregistrer     
+     laisser le temps de verifier le mot de passe     
+     une meilleure protection des pages du site    
+
+
+
+
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// ----- OBJET
+// --------------------------------------------------------------------
+// --------------------------------------------------------------------
+
+
+ Qu'est-ce qu'une classe ?
+     Un ensemble d'éléments de programmes (fonctions, calculs...) accomplissant une tâche spécifique.     
+     Une fonction réalisant des opérations particulières     
+     Un ensemble de fonctions réalisant des opérations variées     
+2 _ Comment s'appellent les fonctions qui sont dans une classe ?
+     Des methodes     
+     Des objets     
+     Des instances     
+3 _ Comment réalise-t-on l'appel de la classe nommée myClass ?
+     $myCopy = myClass();     
+     $myCopy = newClass myClass();     
+     $myCopy = new myClass();     
+4 _ Dans l'exemple de la question précédente, qu'appelle-t-on $myCopy (2 réponses) ?
+     Un objet     
+     Une instance de la classe myClass     
+     Une copie de la classe myClass     
+5 _ Qu'est-ce qu'un constructeur ?
+     Une classe particulière     
+     Une fonction particulière dans une classe     
+     La première methode de la classe     
+6 _ Qu'a de particulier un constructeur (2 réponses) ?
+     Il ne comprend que des déclarations     
+     Il s'execute à chaque appel de la classe     
+     Il porte le même nom que la classe     
+7 _ Comment accéde-t-on à une fonction d'une classe ?
+     $instanceDeClasse->MethodeDeClasse(parametre_1,paramètre_2...)     
+     methodeDeClasse->$instanceDeClasse(parametre_1,paramètre_2...)     
+     $instanceDeClasse->$MethodeDeClasse(parametre_1,paramètre_2...)     
+8 _ Après le code $myVar = new myClass(); qu'est $myVar (2 réponses) ?
+     Un objet     
+     Une nouvelle fonction     
+     Une instance de la classe myClass()     
+9 _ Qu'est-ce qu'une méthode ?
+     Une fonction avec des déclarations     
+     Une fonction dans une classe     
+     Un ensemble de déclarations dans une classe     
+10 _ Qu'est-ce qu'un objet en PHP ?
+     Une methode     
+     Une instance de classe     
+     Une fonction dans une classe    
+
+
+
+
+/ùlllllll
+
+
+
+
+
+Question 4/5 : PHP
+Barème : bonne réponse 4 points, mauvaise réponse -1 point, je ne sais pas 0 point
+
+
+$n = 0;
+for ($i=0;$i<5;$i++) {
+    $n = $n + 1;
+}
+print $i;
+
+Qu'affiche le script ?
+
+ Je ne sais pas 
+ A) 4 
+ B) 5 
+ C) 6 
+ D) 7 
+
+
+
+Question 5/5 : PHP
+Barème : bonne réponse 4 points, mauvaise réponse -1 point, je ne sais pas 0 point
+
+
+$resultat = "Bonjour";
+for ($i=1;$i<3;$i++) {
+    $resultat = $resultat."Bonsoir";
+}
+print $resultat;
+
+Qu'affiche le script ?
+
+ Je ne sais pas 
+ A) BonjourBonsoir 
+ B) BonjourBonsoirBonsoir 
+ C) BonsoirBonsoirBonjour 
+
+
+
+
+
+
+Question 5/5 : PHP
+Barème : bonne réponse 4 points, mauvaise réponse -1 point, je ne sais pas 0 point
+
+
+function func($a)
+{
+    $a += 2;
+    return $a;
+}
+
+$a = 5;
+$b = func($a);
+print "$a $b";
+
+Qu'affiche le script ?
+
+ Je ne sais pas 
+ A) 5 5 
+ B) 5 7 
+ C) 7 5 
+ D) 7 7 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Les variables membres d’une classe sont également appelées __________?
+A Des attributs
+B Des propriétés
+C Des instances
+D Tout les réponses sont vrais
+Réponse
+
+LES 100 FONCTIONS PHP QUE VOUS DEVEZ SAVOIR – PARTIE 1
+Voici la liste des 100 fonctions natives les plus utilisées en PHP.   Count Retourne le nombre d’éléments dans un tableau. <?php $colors=array("Blue","Orange","red"); echo count($colors);…
+LIRE PLUS
+ 
+4. Lequel des éléments suivants peut être utilisé pour instancier un objet en PHP en supposant que le nom de la classe soit « MaClass »?
+A $obj = new $maClass;
+B $obj = new MaClass();
+C $obj = new MaClass;
+D obj = new MaClass();
+
+
+
+
+6. Parmi les propositions suivantes, laquelle est la meilleure façon pour définir une constante?
+A constant MAX = “100”;
+B const $MAX = “100”;
+C constant MAX = ‘100’;
+D const MAX = ‘100’;
+Réponse
+
+7. Parmi les propositions suivantes, laquelle est la meilleure façon d’appeler une constante de classe, étant donné que la classe est « maClass »?
+A echo MAX;
+B echo maClass->MAX;
+C echo maClass::MAX;
+D echo maClass = MAX;
+Réponse
+
+8. Parmi les propositions suivantes, laquelle est la meilleure façon d’invoquer une méthode?
+A $object->maMethod();
+B object->maMethod();
+C object::maMethod();
+D $object::maMethod();
+
+
+9. Parmi les propositions suivantes, laquelle est / sont la meilleure façon de déclarer une méthode?
+A function myFunction() { instructions; }
+B scope function myFunction() { instructions; }
+C method myMethod() { instructions; }
+D scope method myMethod() { instructions; }
+Réponse
+
+
+
+2. Dans le code PHP donné ci-dessous, quelles sont les propriétés?
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A function test()
+B class MaClass
+C public $var;
+D echo “Ceci est un exemple”;
+Réponse
+3. Quel mot-clé est utilisé pour faire référence à des propriétés ou à des méthodes dans la classe elle-même?
+A private
+B $this
+C protected
+D public
+Réponse
+ 
+4. Quel mot clé permet aux membres de la classe (méthodes et propriétés) d’être utilisés sans avoir à instancier une nouvelle instance de la classe?
+A protected
+B final
+C static
+D private
+Réponse
+5. La fonction __sleep() est appelée lorsque vous ______?
+A sérialiser un objet
+B désérialiser un objet
+C Partager un objet
+D Choisissez un objet
+Réponse
+6. La clause Extends est utilisée pour____?
+A hériter d’une autre classe
+B extension de fonction
+C créer des constructeurs
+D Aucune de ces réponses n’est vraie.
+Réponse
+7. PHP ne prend pas en charge _______?
+A HTML
+B JavaScript
+C Héritage multiple
+D Tout les réponses sont vrais
+Réponse
+8. Une classe abstraite est une classe qui ne peut être instanciée mais ___?
+A Seulement hérité
+B Seulement déclaré
+C Seulement copié
+D Tout les réponses sont vrais
+Réponse
+9. Un processus qui convertit une chaîne d’octets de manière à ce que vous puissiez à nouveau produire les données d’origine est appelé ____?
+A Synchronisation
+B Spécialisation
+C Sérialisation
+D Parallélisation
+Réponse
+10. Quelle version de PHP a introduit les concepts avancés de la POO?
+A PHP 4
+B PHP 5
+C PHP 5.3
+D PHP 6
+Réponse
+
+
+
+
+
+Question 1
+Si $b = false alors, avec "$a = $b ? $c : $d", on a "$a == $d"
+
+Vrai
+Faux
+Question 2
+On utilise la syntaxe $a => $b dans le contexte de la comparaison des valeurs de $a et $b
+
+Vrai
+Faux
+Question 3
+On appelle la tournure précédente une affectation conditionnelle
+
+Vrai
+Faux
+Question 4
+$_REQUEST est disponible par défaut depuis PHP 5.3.0
+
+Vrai
+Faux
+Question 5
+"echo $a.$b" est équivalent à "echo $a,$b"
+
+Vrai
+Faux
+Question 6
+"echo $a.$b" est plus rapide à l'exécution que "echo $a,$b"
+
+Vrai
+Faux
+Question 7
+PHP gère le multi-héritage en POO depuis php 5.3.2
+
+Vrai
+Faux
+Question 8
+
+Les fonctions en php doivent obligatoirement retourner true, false ou une ressource
+
+Vrai
+Faux
+Question 9
+La programmation orientée objet consomme généralement plus de mémoire que la procédurale
+
+Vrai
+Faux
+Question 10
+PDO et mysqli sont deux drivers de bases de données qui permettent de préparer et sécuriser vos requêtes
+
+Vrai
+Faux
+Question 11
+PDO et mysqli sont compatibles avec sqlite
+
+Vrai
+Faux
+Question 12
+$a%$b renvoie le reste de la division de $a par $b
+
+Vrai
+Faux
+Question 13
+Simplexml permet d'ajouter simplement un neud avant un autre noeud
+
+Vrai
+Faux
+Question 14
+Il est recommandé d'utiliser la fonction addslashes() pour sécuriser vos requêtes MySQL
+
+Vrai
+Faux
+Question 15
+Php sait gérer les namespaces
+
+Vrai
+Faux
+Question 16
+Fopen($path, 'w') permet d'ouvrir un fichier en écriture et place le curseur à la fin du fichier
+
+Vrai
+Faux
+Question 17
+Si l'on sait que l'on ne travaillera jamais sur autre chose qu'une base MySQL, mysql_connect() est la fonction à privilégier
+
+Vrai
+Faux
+Question 18
+Php6 intégrera un système de cache intégré
+
+Vrai
+Faux
+Question 19
+La nouveauté majeure de php6 sera un système de débuggage
+
+Vrai
+Faux
+Question 20
+Php supporte les fonctions anonymes (closures)
+
+Vrai
+Faux
+
+
+
+Comment vérifier la syntaxe d'une adresse e-mail contenue dans la variable $email ?
+ strpos($email,"*@*.*")
+ ereg($email,"[:alpha:]*@[:alpha:]*\.[:alpha:]*")
+ preg_match("/^(\w|-)+@((\w|-)+\.)+[a-z]{2,6}$/i",$email)
+2
+Par défaut, dans quel ordre de priorité sont affectées les variables envoyées par HTTP ?
+ get, cookie, post
+ post, get, cookie
+ get, post, cookie
+ post,cookie, get
+3
+Comment définit-on le constructeur d'une classe (compatible PHP3/4/5) ?
+ grâce à public static void()
+ en utilisant __construct()
+ en nommant la fonction comme la classe
+4
+Comment mémorise-t-on de façon pratique une variable d'un script à l'autre sur un serveur web ?
+ Grâce à serialize()
+ En utilisant $_SESSION
+ Au moyen de register_globals()
+5
+Quelle fonction de bufferisation (temporisation) envoie au navigateur les données contenues par le tampon, et stoppe la tamporisation de sortie ?
+ ob_flush()
+ ob_end_flush()
+ ob_get_flush()
+6
+De quelle façon autorise-t-on l'accès à un fichier
+- en lecture/écriture/exécution pour le propriétaire
+- en lecture/écriture pour le groupe
+- en lecture pour les autres
+?
+ chmod('fichier',0764);
+ chmod('fichier','u+wrx g+rw o+r');
+ chown('fichier','0777');
+7
+Quel mot clé permet de conserver la valeur d'une variable locale dans une même fonction appelée plusieurs fois de suite ?
+ global
+ const
+ static
+8
+Quelle fonction permet d'obtenir les informations suivantes à propos d'un fichier : date de dernier accès, date de modification, date de création ?
+ stat()
+ filemtime()
+ filegroup()
+9
+Quelle méthode permet d'attraper par défaut les exceptions lancées par un script, à l'aide d'une fonction propre function gestion_exception($e) { ... } ?
+ $handler->setdefault('gestion_exception');
+ set_exception_handler('gestion_exception');
+ exception_handler($e) = gestion_exception();
+10
+$a = M_PI;
+$b = &$a;
+Sachant qu'au cours de l'éxécution du script, $a = 10, que vaudra pow($b,2) * sqrt(3)/2 + $a; ?
+ pi² sqrt(3)/2 + 10
+ pi² sqrt(3)/2 + pi
+ Quel est le tordu qui a pu pondre un truc pareil ?
+ 50 sqrt(3) + 10
+
+
+
+
+
+
+
+Quelle fonction retourne le nombre de secondes écoulées depuis le 1er janvier 1970 ?
+ time
+ timestamp
+ mktime
+ microtime
+2
+Quelle instruction permet d'ouvrir un fichier en écriture afin d'ajouter des données à la fin de son contenu ?
+ fopen("fichier","r+")
+ fopen("fichier","w")
+ fopen("fichier","a")
+3
+Quelle fonction retire un élément de la fin d'un tableau ?
+ array_splice()
+ array_pop()
+ array_pad()
+ array_shift()
+4
+Quelle fonction permet d'envoyer des en-têtes HTTP au navigateur avant le contenu de la page ?
+ parse_url()
+ http_post()
+ header()
+5
+Dans quel tableau de données retrouve-t-on les cookies du visiteur ?
+ $SETCOOKIE
+ $COOKIES
+ $HTTP_COOKIES
+ $_COOKIE
+ $HTTP_COOKIES_VARS
+6
+Quelle fonction permet de lire le résultat d'une ressources MySQL renvoyée par mysql_query() ?
+ mysql_fetch_row()
+ mysql_data_seek()
+ mysql_affected_rows()
+7
+Quelle fonction permet d'effacer un fichier ?
+ delete()
+ unlink()
+ remove()
+ clearfile()
+8
+Comment peut-on trier un tableau en ordre inverse ?
+ $tableau = ksort($tableau);
+ ksort($tableau)
+ $tableau = rsort($tableau);
+ rsort($tableau);
+9
+Comment définit-on une constante ?
+ set('maconstante' = 'valeur');
+ define("maconstante","valeur");
+ const $maconstante = valeur;
+10
+Quelle instruction n'est pas le nom d'une fonction ?
+ exit
+ print_r
+ define
+
+
+
+
+
+Que signifie PHP ?
+ Page Helper Process
+ Programming Home Pages
+ PHP: Hypertext Preprocessor
+2
+Quelle fonction retourne la longueur d'une chaîne de texte ?
+ strlen
+ strlength
+ length
+ substr
+3
+Comment accède-t-on au 1er élément chaton dans le tableau suivant : $tableau = Array('chaton' , 'ornithorynque', 'dauphin'); ?
+ $tableau[1]
+ $tableau[0]
+ $tableau{0}
+ $tableau.get(1)
+4
+Comment vérifie-t-on l'égalité de deux variables : $a et $b ?
+ $a = $b
+ $a == $b
+ $a != $b
+ if($a,$b)
+5
+Quelle est l'utilité de l'opérateur || ?
+ Il sert à vérifier que toutes les conditions sont réalisées.
+ Il sert à vérifier qu'une, et une seule, des conditions est réalisée.
+ Il sert à vérifier qu'une, au moins, des conditions est réalisée.
+6
+Quelles valeurs peut prendre le type booléen ?
+ 0 ou 1
+ TRUE ou FALSE
+ Toutes sauf NULL
+7
+La boucle for ($i=0 ; $i<=3 ; $i++ ) { echo $i; }...
+ Sera éxécutée 2 fois
+ Sera éxécutée 3 fois
+ Sera éxécutée 4 fois
+8
+Sachant que $a = 4. Quelle instruction affiche : 4 = quatre ?
+ echo '$a = quatre';
+ echo '$a = 2+2';
+ echo "$a = quatre";
+9
+Sachant que $dodo = 6. Quelle est la valeur de ma nuit : $dodo += 2; ?
+ 3
+ 8
+ 12
+10
+Dans le cas d'envoi d'informations plus ou moins sensibles par formulaire, quelle méthode utilisera-t-on de préférence ?
+ get
+ mailto
+ post
+
+
+
+----------------------------------------------------------- Syntaxe GIFT
+// =============================================================
+// QCM DPO 
+// DPO3 : lundi 24 septembre 2018
+// DPO4 : mercredi 27 février 2019
+// =============================================================
+
+$CATEGORY: 190401_DPO
+
+// 1=============================================================
+::Les principaux concepts des BDR::
+Quels sont les principaux concepts du modèle relationnel ? 
+{
+~%25% Relation
+~%25% Produit cartésien
+~%0%  Héritage
+~%25% Clé primaire
+~%0%  Schéma d'un objet
+~%25% Clé étrangère
+}
+
+// 2=============================================================
+::Schéma d'une relation::
+A quoi correspond le schéma d'une relation (table) ? 
+{
+~ à la liste des contraintes d'intégrité de la relation
+~ à un dessin associé à chaque relation
+= à la liste des attributs de la relation en précisent la clé primaire
+~ à la liste des domaines de définition des attributs
+~ à la liste des relations présentes dans la base
+}
+
+// 3=============================================================
+::Contraintes d'intégrité::
+Laquelle de ces propositions n'est pas une contrainte d'intégrité pour le modèle relationnel ? 
+{
+~ not null
+~ primary key
+= privacy
+~ check
+~ unique
+}
+
+// 4=============================================================
+::Clé primaire::
+Il est obligatoire de définir une clé primaire pour toutes les relations de la base ?
+{T}
+
+// 5=============================================================
+::Clé étrangère::
+Il est obligatoire de définir une clé étrangère pour toutes les relations de la base ?
+{F}
+
+// 6=============================================================
+::Clé primaire et étrangère::
+Il est obligatoire de définir une clé primaire et une clé étrangère pour toutes les relations de la base ?
+{F}
+
+// 7=============================================================
+::Clé primaire composée::
+Quelles sont les contraintes d'intégrité qui s'appliquent à une clé primaire composée. fExemple relation DPO(<u>A,B</u>,C,D) ?
+{
+~%0%  Check
+~%50% Unique
+~%0%  Schema
+~%50% Not null
+~%0%  Clé étrangère
+}
+
+// 8=============================================================
+::Recherche de la clé étrangère::
+Quelles sont les clés étrangères possibles de la relation R1(<u>A</u>,B,C) vers la relation R2(<u>X,Y</u>,Z,T) ?
+{
+~%0%   A
+~%0%   B
+~%0%   X
+~%25%  A,B
+~%25%  A,C
+~%25%  B,C
+~%25%  C,A
+}
+
+// 9=============================================================PB 
+::Vocabulaire du modèle relationnel::
+Vous disposez des 3 relations suivantes dans votre base : 
+<ul>
+<li>
+create table vin (vin_id integer, cru varchar(40) not null, annee integer check (degre > 5), degre float, primary key(vin_id));
+</li>
+<li>
+create table producteur (prod_id integer, nom char(40), prenom varchar(40), portable varchar(10) unique, region varchar(40), primary key(prod_id));
+</li>
+<li>
+create table recolte (nprod integer, nvin integer, quantite integer, primary key (nprod, nvin), foreign key (nprod) references producteur (prod_id), foreign key (nvin) references vin (vin_id) );
+</li>
+</ul>
+Appariez les éléments suivants :
+{
+= vin_id -> attribut clé primaire
+= unique -> contrainte d'intégrité
+= prod_id -> attribut clé primaire
+= integer -> type de donnée 
+= primary key -> contrainte d'intégrité
+= not null -> contrainte d'intégrité
+= check -> contrainte d'intégrité
+= cru -> attribut
+= nprod -> attribut clé étrangère
+= varchar -> type de donnée 
+= foreign key -> contrainte d'intégrité
+= quantité -> attribut
+}
+
+
+// 10=============================================================
+::Opérateur de l'algèbre relationnel::
+Vous disposez des relations suivantes dans votre base : 
+DEPARTEMENT (<u>label</u>, directeur) avec les tuples suivants : ('DRH', 123), ('RECHERCHE', 456), ('VALORISATION', 789), ('PRODUCTION', 123)
+PERSONNEL (<u>id</u>, prénom) avec les tuples suivants : (123, 'marc'), (456, 'alain'), (789, 'patrick')
+Nombre de tuples présents dans le produit cartésien des 2 relations ? 
+{
+~ 0
+~ 3
+~ 6
+~ 7
+= 12
+}
+
+// 11=============================================================
+::Opérateur de l'algèbre relationnel::
+Vous disposez des relations suivantes dans votre base : 
+DEPARTEMENT (<u>label</u>, directeur) avec les tuples suivants : ('DRH', 123), ('RECHERCHE', 456), ('VALORISATION', 789), ('PRODUCTION', 123)
+PERSONNEL (<u>id</u>, prénom) avec les tuples suivants : (123, 'marc'), (456, 'alain'), (789, 'patrick')
+L'attribut directeur est une clé étrangère vers l'attribut id de la relation PERSONNEL.
+Nombre de tuples présents dans la jointure des 2 relations avec DEPARTEMENT.directeur = PERSONNEL.id ? 
+{
+~ 3
+= 4
+~ 9
+~ 7
+}
+
+// 12=============================================================
+// // questions avec probleme
+
+
+// 13=============================================================
+::Définition d'une vue::
+Qu'est-ce-qu'une vue ?
+{
+~ une contrainte d'intégrité
+~ une clé primaire et une clé étrangère
+~ une table
+= une table virtuelle
+~ un schéma de base de données
+}
+
+// 14=============================================================
+::Caractérisation d'une vue dans le modèle relationnel::
+Quelles sont les propositions vraies ?
+{
+~%25%  Une vue est une relation virtuelle qui n'existe pas dans la base
+~%0%   Une vue permet d'afficher les données à l'écran
+~%0%   Une vue doit obligatoirement posséder une clé primaire
+~%0%   Quelques minutes après sa création, une vue est périmée et il faut la re-générer
+~%25%  Une vue est le résultat d'une requête SQL
+~%25%  Une vue permet de cacher certains attributs des relations utilisées
+~%25%  Une vue permet de simplifier la complexité de certaines recherches
+}
+
+// 15=============================================================
+::Définition d'un rôle::
+Qu'est-ce-qu'un rôle ?
+{
+= un ensemble de droits
+~ un ensemble d'utilisateurs ayant chacun un nom et un mot de passe
+~ la liste des actions que doit réaliser le responsable du traitement
+}	
+
+// 16=============================================================
+::Définition d'une base de données::
+Qu'est ce qu'une base de données ?
+{
+= C'est un logiciel
+~ C'est une collection d'informations structurées
+~ C'est un module à valider
+}
+
+// 17=============================================================
+::Avantages d'une base de données::
+Quels sont les avantages liés à l'utilisation des systèmes de gestion de bases de données
+{
+~%50% L'utilisation d'un langage de requête déclaratif
+~%0%  Une plus grande indépendance par rapport au système d'exploitation
+~%50% Une description unique et globale des données manipulées
+}
+
+// 18=========================================================
+::Définition d'une fuite de données::
+Quelles sont les définitions valides pour le terme de fuite de données ? 
+{
+~%20% Fuite intentionnelle sous forme de partage d’informations confidentielles
+~%0%  Fuite d'informations due au vieillissement des ordinateurs
+~%20% Vol d’ordinateurs portables
+~%0% Vol de ramettes de papiers ou de petits équipements du secrétariat (ciseaux, crayons, ...)
+~%20% Négligence de la part des collaborateurs qui naviguent sur des sites non sécurisés 
+~%20% Négligence de la part des collaborateurs qui laissent leur session d'ordinateur ouverte
+~%0% Négligence de la part des collaborateurs qui laissent certains câbles réseaux non branchés
+~%20% Négligence de la part des collaborateurs qui oublient des impressions de documents sensibles sur des imprimantes accessibles à une population externe
+}
+
+// 19=============================================================
+::Concepteur d'applications mobiles::
+Quelles sont les solutions qui permettent aux concepteurs d'une application mobile de respecter la réglementation RGDP ?
+{
+~%0%  Déménager dans un pays n'appartement pas à l'Union Européenne
+~%0%  Chiffrer l'ensemble des DCP pour qu'elles ne soient plus visibles
+~%50% Anonymiser les DCP
+~%0%  Sauvegarder les données sans utiliser une base de données relationnelle
+~%50% Obtenir le consentement des utilisateurs pour l'usage de leurs DCP pour un objectif précis
+}
+
+// 20=============================================================
+::Sauvegarde::
+Est-il concevable de réaliser des sauvegardes avec des pertes de données ? 
+{F}
+
+// 21=============================================================
+::Archivage::
+Est-il concevable de réaliser des archivages avec des pertes de données ?
+{T}
+
+// 22=============================================================
+::Cookie::
+Quelle est la définition d'un cookie ?
+{
+~ C'est une information stockée sur l'ordinateur qui héberge le site Web
+~ C'est une information stockée sur l'ordinateur de l'entreprise qui propose le service
+~ C'est un petit objet sucré qui permet de motiver les développeurs d'applications Web
+= C'est une information stockée sur l'ordinateur de l'internaute
+~ C'est une information partagée entre tous les navigateurs de l'ordinateur de l'internaute
+}
+
+// 23=============================================================
+::Données personnelles::
+Une donnée personnelle est ? 
+{
+~ Une information relative à une personne physique ou morale
+= Une information relative à une personne physique uniquement
+~ Une information relative à une personne morale uniquement
+~ Une information privée et confidentielle
+}
+
+// 24=============================================================
+::Application DPO::
+Dans l'exemple « le fils du professeur résidant dans l'appartement 14 de l'immeuble situé 12 rue Marie Curie à Troyes est un mauvais élève », 
+quelle est la donnée à caractère personnel qui permet d'identifier les personnes concernées ?
+{
+~ Le fils du professeur
+= Appartement 14 de l'immeuble situé 12 rue Marie Curie à Troyes est un mauvais élève
+~ Aucune de ces propositions
+}
+
+// 25=============================================================
+::Application DPO::
+Un projet de traitement prévoit la réutilisation des courriels des étudiants qu'ils ont fournis pour leur inscription administrative
+afin de leur envoyer des offres de cabinets de recrutement. Ce projet ne respecte pas :
+{
+~ Le principe de pertinence des données
+= Le principe de finalité
+~ Le principe de sécurité et de confidentialité
+}
+
+// 26=============================================================
+::Application DPO::
+L'université décide de développer une application de gestion des congés en ligne. Le DPO peut être amené à formuler des recommandations sur :
+{
+~%0% Le budget consacré à la nouvelle application
+~%0% Les mentions d'information
+~%50% La sécurité de l'accès aux données à caractère personnel
+~%50% La durée de conservation de ces données
+}
+
+// 27=============================================================
+::Portabilité des données::
+Que permet la portabilité des données :
+{
+~ De les déplacer à l’intérieur d’un service
+~ De les rendre compatible sur un téléphone portable
+= De les récupérer pour les transférer sur un autre service
+~ De les alléger pour pouvoir les porter à bout de bras
+}
+
+// 28=============================================================
+::Consentement::
+Le recueil du consentement de la personne est-il systématiquement obligatoire ?
+{F}
+
+
+// 29=========================================================
+::Privacy::
+Qu’est-ce que le privacy by design :
+{
+~ C’est l’obligation pour les sites web de veiller à la protection des données personnelles de chaque nouvelle connexion
+~ C'est l'obligation de protéger les données des designers
+= C’est l’obligation de veiller, dès la conception de sa technologie, à la protection des données
+~ C'est l'obligation de faire de l'esthétique sur la vie privée
+}
+ 
+ 
+// 30=============================================================
+::L’anonymisation::
+Quels sont les rôles de l'anonymisation :
+{
+~%50% Sécurisation de l’exploitation des données personnelles
+~%50% Respect des droits fondamentaux des personnes dont les données personnelles sont traitées
+~% 0% Transfert de données non identifiantes
+~% 0% Remplacement d'un attribut par un autre au sein d’un enregistrement. 
+}
+
+
+// 31=============================================================
+::PK::
+Une clé primaire peut être (ne pas prendre en compte les types complexes comme BLOB ...) :
+{
+~% 0% Uniquement du type NUMBER (Oracle) ou INTEGER(MySQL)
+~%50% De tous les types possibles
+~% 0% De tous les types possibles sauf date
+~%50% Du type VARCHAR ou VARCHAR2
+} 
+
+// 32=============================================================
+::Relation::
+Une relation doit forcément avoir :
+{
+~%50% Une seule clé primaire
+~% 0% Une clé primaire et une clé étrangère
+~%50% Des attributs 
+~% 0% Plusieurs clés primaires
+} 
+
+
+// 33=============================================================
+::Suppression d'une table::
+Comment faire pour supprimer une relation :
+{
+~ delete
+= drop
+~ clear
+~ remove
+}
+
+// 34=============================================================
+::FK::
+Des clés étrangères :
+{
+~% 0% peuvent être utilisées en tant que clé primaire dans la même relation
+~%50% peuvent être des attributs
+~%50% doivent être uniques
+~% 0% doivent être systématiquement présentes dans une relation
+} 
+
+// 35=============================================================
+::Définition d'un privilège::
+Qu'est-ce qu'un privilège :
+{
+~ Une agrégation de droits d'accès qui permet de réduire la complexité
+~ Un profil d'un utilisateur qui limite l'utilisation de la base et des ressources
+= Un droit pour exécuter une instruction SQL ou accéder à des objets relationnels
+~ Droit ou avantage exclusif possédé par un individu ou un groupe 
+} 
+
+// 37=============================================================
+::Fonction d'agrégation::
+Est-il possible d'utiliser les fonctions d'agrégation (sum, count, max) dans  :
+{
+~%50% le SELECT
+~% 0% le GROUP BY
+~%50% le HAVING
+~% 0% le FROM
+}
+
+// 36=============================================================
+::Privilèges::
+A quel moment précise-t-on les privilèges d'un utilisateur :
+{
+~ lors de la création de profils
+= lors de la création des rôles
+~ directement lors de la création de l'utilisateur
+~ Les privilèges sont ceux donnés par défaut et il n'est pas possible de les modifier
+} 
+
+
+
+
+
+
+
+
+
+
+
