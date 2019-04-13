@@ -48,6 +48,8 @@ class Module implements WBinterface {
     }
 
     /*
+     * impossible de surcharger un constructeur meme avec param différents
+     * 
       function __construct() {
       $sigle = "?";
       $label = "?";
@@ -57,7 +59,6 @@ class Module implements WBinterface {
      */
 
     function __construct($sigle, $label, $cat, $effectif) {
-        echo "<!-- classe module : construct($sigle,$label,$cat,$effectif) -->\n";
         $this->setSigle($sigle);
         $this->setLabel($label);
         $this->setCategorie($cat);
@@ -68,14 +69,10 @@ class Module implements WBinterface {
         echo "<!-- classe module : destruct($this->sigle,$this->label,$this->categorie,$this->effectif) -->\n";
     }
 
-    function __tostring() {
-// tableau ....
-        $resultat = "<table border='1' cellspacing='5' cellpadding='5'>\n";
-        $resultat .= "<th>" . $this->getSigle() . "</th>\n";
-        $resultat .= "<td>" . $this->getLabel() . "</td>\n";
-        $resultat .= "<td>" . $this->getCategorie() . "</td>\n";
-        $resultat .= "<td>" . $this->getEffectif() . "</td>\n";
-        return $resultat;
+    function __toString() {
+        return "Module (" . $this->getSigle() . ", " . $this->getLabel() . ", " . $this->getCategorie() . ", " . $this->getEffectif() . ")"; 
+
+
     }
 
 // ================================================================
@@ -93,12 +90,8 @@ class Module implements WBinterface {
         foreach ($this->listeErreurs as $key => $value) {
             echo ("$key => $value <br />\n");
         }
+        echo WBcharte::html_foot_bootstrap();
     }
-        
-    public function pageFoot() {
-       echo WBcharte::html_foot_bootstrap();
-    }
-    
 
     public function pageOK() {
         echo WBcharte::html_head_bootstrap("Les WebBean Modules");
@@ -106,6 +99,7 @@ class Module implements WBinterface {
         foreach ($_GET as $key => $value) {
             echo ("$key => $value <br />\n");
         }
+        echo WBcharte::html_foot_bootstrap();
     }
 
     public function sauveTXT() {
@@ -117,7 +111,7 @@ class Module implements WBinterface {
     }
 
     public function sauveXML($file) {
-        return "xml";
+        return "Module en xml à faire plus tard";
     }
 
     public function sauveBDR($table) {
@@ -125,8 +119,21 @@ class Module implements WBinterface {
         $resultat .= "'" . $this->getSigle() . "',";
         $resultat .= "'" . $this->getCategorie() . "',";
         $resultat .= "'" . $this->getLabel() . "',";
-        $resultat .= "" . $this->getEffectif() . ")";
+        $resultat .= "" . $this->getEffectif() . ");";
         return $resultat;
     }
-
+    
+    
+    public function createTable($table) {
+        $res  = "create table $table ( ";
+        $res .= "  sigle varchar(6) not null, ";
+        $res .= "  categorie varchar(2) check categorie in ('CS', 'TM', 'EC', 'ME', 'CT'), ";
+        $res .= "  label varchar(40) not null, ";  
+        $res .= "  effectif integer, ";
+        $res .= "  primary key (sigle)";
+        $res .= ");";
+        return $res;
+    }
+    
+ 
 }

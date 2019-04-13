@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include ('../p19_tp06/tp06_biblio_formulaire_bt.php');
-$titre = "tp08_cursus_form.php";
+$titre = "tp08_module_form.php";
 ?>
 
 <html>
@@ -21,8 +21,7 @@ $titre = "tp08_cursus_form.php";
             </div> 
             <?php         
             // form_begin("", "get", "../p19_tp07/analyse_superglobales.php");
-            form_begin("", "get", "tp08_cursus_action.php");            
-            
+            form_begin("", "get", "module_action.php");            
             form_input_text("Sigle", "sigle", 30, "LO07");
             form_input_text("Label", "label", 30, "Web");   
             $categorie = array ("CS", "TM", "EC", "ME", "CT");

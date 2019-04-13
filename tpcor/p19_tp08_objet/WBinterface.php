@@ -10,6 +10,6 @@ interface WBinterface {
   public function pageOK();
   public function sauveTXT();
   public function sauveXML($file);
-  public function sauveBDR($base);
+  public function sauveBDR($table);
 }
 
