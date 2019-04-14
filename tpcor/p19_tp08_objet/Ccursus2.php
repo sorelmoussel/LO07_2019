@@ -9,7 +9,6 @@ class Cursus2 {
     function __construct() {
         //echo ("Cursus2 constructeur");
         session_start();
-
         $base = $_SESSION[DATA];
         if ($base) {
            // echo("construct : recuperation de la base");
@@ -25,7 +24,6 @@ class Cursus2 {
     function addModule($module) {
         // echo ("addmodule : $module");
         $this->listeModules[$module->getSigle()] = $module;
-
         // persistance 
         $_SESSION[DATA] = $this->listeModules;
         // echo("addModule : persistance ");
@@ -46,7 +44,5 @@ class Cursus2 {
         print_r($_SESSION);
         echo("</pre>");
     }
-
 }
-
 ?>
