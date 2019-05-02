@@ -1,3 +1,7 @@
+-- =====================================================================
+-- ===== vehicule2_create
+-- =====================================================================
+
 create table if not exists proprietaire2 (
  id integer not null,
  nom varchar(30) not null,

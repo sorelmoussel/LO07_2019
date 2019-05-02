@@ -1,3 +1,6 @@
+-- =====================================================================
+-- ===== vehicule2_insert
+-- =====================================================================
 
 insert into proprietaire2 values (100, 'marc', 'lemercier', 'Troyes');
 insert into proprietaire2 values (200, 'alain', 'ploix', 'Chalons');	

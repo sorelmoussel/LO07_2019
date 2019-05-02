@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Présentation du programme ISI de l'UTT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bootstrap.css" rel="stylesheet"/>
+        <link href="tp10_css.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+
+    <body>
+        <div class="container">
+
+            <!-- ===================================================== -->
+            <!-- Barre de menu -->
+            <!-- ===================================================== -->           
+
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Module LO07</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"> <a href="#">TCBR</a></li>
+                    <li class="active"> <a href="#">Filières</a> </li>
+                    <li class="active"> <a href="#">Capsules</a> </li> 
+                    <li class="active"> <a href="#">TPE</a> </li>                     
+                    <li class="active"> <a href="#">Stages</a> </li>
+                    <li class="active"> <a href="#">SE</a> </li>   
+                </ul>
+            </nav> 
+
+
+
+            <!-- ===================================================== -->
+            <!-- Jumbotrom -->
+            <!-- ===================================================== -->
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Utilisation d'un Jumbotron (cet élément est un panel-succes).</h3>
+                </div>
+                <div class="panel-body">
+                    Le jumbotron est un composant de Bootstrap. Il affiche un bloc situé en haut de la page d'un site. 
+                    Ce bloc est plus large que le reste de la page. Le but est d'attirer l'attention de l'utilisateur 
+                    sur un élément particulier. Ce bloc est gris par défaut, mais il est possible de le modifier grâce 
+                    au CSS et à JavaScript pour qu'il puisse contenir une image située en arrière-plan.
+                </div>
+            </div> 
+
+            <div class="jumbotron">
+                <h1>Programme ISI de l'UTT </h1>
+                <p>Le programme ISI de l'UTT dispose actuellement de trois filières MPL, MSI et MCS ...</p>
+            </div>
+
+            <!-- ===================================================== -->
+            <!-- Mise en place d'une pagination -->
+            <!-- ===================================================== -->
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mise en place d'une pagination</h3>
+                </div>
+                <div class="panel-body">
+                    We use a large block of connected links for our pagination, making links hard to miss and 
+                    easily scalable—all while providing large hit areas. Pagination is built with list HTML elements
+                    so screen readers can announce the number of available links. Use a wrapping "nav" element to
+                    identify it as a navigation section to screen readers and other assistive 
+                    technologies.
+                </div>
+            </div> 
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination  pagination-lg">
+                    <li><a href="#">TCBR</a></li>
+                    <li><a href="#">FIL</a></li>
+                    <li><a href="#">Capsules</a></li>
+                    <li><a href="#">TPE</a></li>
+                    <li><a href="#">Stages</a></li>
+                    <li><a href="#">SE</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===================================================== -->
+            <!-- Mise en place de bouton avec des badges .. -->
+            <!-- ===================================================== -->
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mise en place de bouton avec des badges</h3>
+                </div>
+                <div class="panel-body">
+                    Je vous propose de découvrir les badges de Bootstrap. Ils pourront être utiles pour afficher et mettre en avant une valeur numérique.
+                    Pour les utiliser, il faut tout simplement utiliser la classe : .badge
+                </div>
+            </div> 
+
+            <!-- Ajout de bouton et de bouton avec des badges .. .-->      
+
+            <button class="btn btn-success">MPL</button>
+            <button class="btn btn-danger">MSI <span class="badge text-success">30</span></button>
+            <button class="btn btn-warning">MCS <span class="badge text-success">8</span></button>
+
+            <p/>
+
+
+            <!-- ===================================================== -->
+            <!-- Mise en place de grilles de présentation -->
+            <!-- ===================================================== -->
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mise en place de grilles de présentation</h3>
+                </div>
+                <div class="panel-body">
+                    Le système de grille est le coeur de Bootstrap qui considère qu'une ligne "row" fait 12 colonnes. 
+                </div>
+            </div> 
+
+            <!-- 3 colonnes  ...-->
+            <h4>Grille de 3 colonnes (lg-4)</h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4">
+                        Col 1 
+                    </div>
+                    <div class="col col-lg-4">
+                        Col 2
+                    </div>
+                    <div class="col col-lg-4">
+                        Col 3
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 3 colonnes  ...-->
+            <h4>Grille de 2 et 3 colonnes </h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4">
+                        1 of 2
+                    </div>
+                    <div class="col col-lg-8">
+                        2 of 2
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-lg-2">
+                        1 of 3
+                    </div>
+                    <div class="col col-lg-4">
+                        2 of 3
+                    </div>
+                    <div class="col col-lg-6">
+                        3 of 3
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 colonnes  ...-->
+            <h4>Grille du l'exercice 4 du TP Web 02</h4>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-12 text-center">
+                        Boite 1
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-lg-4">
+                        Boite 2
+                    </div>
+                    <div class="col col-lg-4">
+                        Bimage
+                    </div>
+                    <div class="col col-lg-4">
+                        Boite 3
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-12">
+                        Boite 4 
+                        <span>(Boite 5)<span>
+                                </div>
+                                </div>
+
+                                </div>
+
+                                <p/><br/><p/>
+
+                                <!-- ===================================================== -->
+                                <!-- Mise en place cards  -->
+                                <!-- ===================================================== -->
+
+                                <p/>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Utilisation de card avec une image</h3>
+                                    </div>
+                                    <div class="panel-body">A card is a flexible and extensible content container. It includes options for 
+                                        headers and footers, a wide variety of content, contextual background colors, and powerful display
+                                        options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar
+                                        functionality to those components is available as modifier classes for cards.
+                                    </div>
+                                </div> 
+
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+
+                                        <div class="card" style="width: 18rem;">
+                                            <img class="card-img-top" src="images/mpl.jpg" alt="MPL image" width="150">
+                                            <div class="card-body">
+                                                <h5 class="card-title">MPL</h5>
+                                                <p class="card-text">management de projets logiciels (MPL) : gérer une équipe de création logicielle en s’assurant de la 
+                                                    satisfaction du client et du respect des coûts et des délais</p>
+                                            </div>
+                                        </div> 
+
+                                    </div>
+
+                                    <!-- ============================= -->
+
+                                    <div class="col-sm-4">
+
+                                        <div class="card" style="width: 18rem;">
+                                            <img class="card-img-top" src="images/msi.jpg" alt="MSI image" width="150">
+                                            <div class="card-body">
+                                                <h5 class="card-title">MSI</h5>
+                                                <p class="card-text">Management des systèmes d’information (MSI) : combiner l’informatique et 
+                                                    l’analyse des processus de travail pour résoudre des problèmes organisationnels grâce aux technologies de l’information</p>
+                                            </div>
+                                        </div> 
+
+
+                                    </div>
+
+                                    <!-- ============================= -->
+                                    <div class="col-sm-4">
+                                        <div class="card" style="width: 18rem;">
+                                            <img class="card-img-top" src="images/mcs.jpg" alt="MPL image" width="150">
+                                            <div class="card-body">
+                                                <h5 class="card-title">MPL</h5>
+                                                <p class="card-text">Management de la cybersécurité (MCS), 100% en alternance (contrat de professionnalisation) :
+                                                    assurer la sécurité des systèmes d’information avec ses implications techniques, organisationnelles, juridiques et humaines.</p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <!-- ===================================================== -->
+                                <!-- Utilisation de tableaux -->
+                                <!-- ===================================================== -->
+
+                                <p/>
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Utilisation de tableaux</h3>
+                                    </div>
+                                    <div class="panel-body">Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be opt-in. Just add the base class .table to any table, then extend with custom styles or our various included modifier classes.</div>
+                                </div> 
+
+
+
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">MPL</th>
+                                            <th scope="col">MSI</th>
+                                            <th scope="col">MCS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">CS</th>
+                                            <td>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">IF10</li>
+                                                    <li class="list-group-item">IF05</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">IF15</li>
+                                                    <li class="list-group-item">IF19</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">MCS1</li>
+                                                    <li class="list-group-item">MCS8</li>
+                                                </ul>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">TM</th>
+                                            <td>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">IF16</li>
+                                                    <li class="list-group-item">IF17</li>
+                                                    <li class="list-group-item">IF26</li>
+                                                    <li class="list-group-item">IF11</li>
+                                                    <li class="list-group-item">LO10</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">IF16</li>
+                                                    <li class="list-group-item">IF17</li>
+                                                    <li class="list-group-item">IF20</li>
+                                                    <li class="list-group-item">IF22</li>
+                                                    <li class="list-group-item">IF24</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">MCS2</li>
+                                                    <li class="list-group-item">MCS3</li>
+                                                    <li class="list-group-item">MCS4</li>
+                                                    <li class="list-group-item">MCS5</li>
+                                                    <li class="list-group-item">MCS6</li>
+                                                    <li class="list-group-item">MCS7</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+
+
+                                <!-- ===================================================== -->
+                                <!-- Utilisation de formulaire -->
+                                <!-- ===================================================== -->
+
+
+                                <p/>
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Utilisation de formulaire</h3>
+                                    </div>
+                                    <div class="panel-body">Bootstrap’s form controls expand on our Rebooted form styles with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+
+                                        Be sure to use an appropriate type attribute on all inputs (e.g., email for email address or number for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+
+                                        Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</div>
+                                </div> 
+
+
+
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label for="nom">Nom ?</label>
+                                        <input type="text" class="form-control" id="nom"  placeholder="Donnez votre nom">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="prenom">Prénom ?</label>
+                                        <input type="text" class="form-control" id="prenom"  placeholder="Donnez votre prénom">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email ?</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Donnez votre Email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="date">Date de naissance ?</label>
+                                        <input type="date" class="form-control" id="date_naissance" placeholder="Donnez votre date de naissance">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="date">Sexe ? </label><br/>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="sexe" id="inlineRadio1" value="M">Masculin
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="sexe" id="inlineRadio2" value="F">Féminin
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="origine">Origine des étudiants </label>
+                                        <select class="form-control" id="origine">
+                                            <option>TC de l'UTT</option>
+                                            <option>DUT INFO</option>
+                                            <option>DUT GE2I</option>
+                                            <option>DUT STID</option>
+                                            <option>DUT autre</option>
+                                            <option>Prepa Scientifiques </option>
+                                            <option>Prépa B/L</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="origine">Validations ?</label>
+                                        <div class="form-group">
+                                            <input class="form-check-input" type="checkbox" value="ST07" id="ST07">
+                                            <label class="form-check-label" for="ST07">ST07</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-check-input" type="checkbox" value="ST09" id="ST09">
+                                            <label class="form-check-label" for="ST09">ST09</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-check-input" type="checkbox" value="ST10" id="ST10" disabled>
+                                            <label class="form-check-label" for="ST10">ST10 (désactivé)</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-check-input" type="checkbox" value="SE" id="SE">
+                                            <label class="form-check-label" for="SE">SE</label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label for="origine">Modules ?</label>
+                                        <select class="form-control" id="modules" multiple size="9">
+                                            <optgroup label="CS">
+                                                <option>GL02</option>
+                                                <option>NF16</option>
+                                                <option>NF20</option>
+                                            </optgroup>
+                                            <optgroup label="TM">
+                                                <option>IF09</option>
+                                                <option>IF14</option>
+                                                <option>LO02</option>
+                                                <option>NF21</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="textarea">Informations complémentaires</label>
+                                        <textarea class="form-control" id="textarea" rows="3"></textarea>
+                                    </div>
+
+
+                                    <button class="btn btn-primary" type="submit">Submit form</button>
+
+                                </form>
+
+
+                                </div>   
+
+                                </body>
+                                </html>

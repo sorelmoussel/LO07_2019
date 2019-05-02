@@ -1,5 +1,6 @@
-
-
+-- =====================================================================
+-- ===== vehicule2_query
+-- =====================================================================
 
 -- liste des proprietaires par voiture 
 
@@ -13,3 +14,4 @@ order by no_plaque;
 select *
 from proprietaire2 P, voiture2 V, possede2 PO
 where PO.p_id = P.id and PO.v_noplaque = v.no_plaque and v.no_plaque = '89 GT 10';
+
