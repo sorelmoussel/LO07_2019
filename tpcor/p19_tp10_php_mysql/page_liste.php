@@ -28,11 +28,14 @@ include 'fragmentHeader.html';
 
 
         <p/>
+        
         <?php
         $query = "select * from vin order by cru";
         $statement = $database->query($query);
-
         include 'fragmentVinResultats.php';
         ?>
+        
+        
+        
     </div>
     <?php include 'fragmentFooter.html'; ?>

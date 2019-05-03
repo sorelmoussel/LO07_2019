@@ -5,8 +5,6 @@
   29 avril 2019
  */
 
-require_once 'Vin.php';
-
 
 // ------------------------------------------------------------------
 echo ("<h2>définition des parametres de la connexion</h2>");
@@ -18,9 +16,8 @@ $password = 'root';
 $options = array();
 try {
     $database = new PDO($dsn, $username, $password, $options);
-} 
-catch (PDOException $e) {
-   printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+} catch (PDOException $e) {
+    printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
 }
 
 // ------------------------------------------------------------------
@@ -30,10 +27,9 @@ echo ("<h2>Exécuter une requete</h2>");
 $query = "select * from vin";
 $statement = $database->query($query);
 echo ("<ul>");
-echo("<li>A</li>");
-//while ($tuple = $statement->fetch()) {
-//    printf("<li>vin(%d, %s, %d, %.2f)</li>\n", $tuple['id'], $tuple['cru'], $tuple['annee'], $tuple['degre']);  
-//}
+while ($tuple = $statement->fetch()) {
+    printf("<li>vin(%d, %s, %d, %.2f)</li>\n", $tuple['id'], $tuple['cru'], $tuple['annee'], $tuple['degre']);
+}
 echo ("</ul>");
 
 
@@ -122,9 +118,6 @@ while ($tuple = $statement->fetch()) {
 echo ("</ul>");
 
 // pas de tuple avec 2000 dans la table des vins .....
-
-
-
 // ===========================================================================================
 
 echo ("Fin \n");
