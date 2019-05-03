@@ -15,9 +15,13 @@ echo ("<h2>définition des parametres de la connexion</h2>");
 $dsn = 'mysql:dbname=LO07_2019;host=localhost;charset=utf8';
 $username = 'root';
 $password = 'root';
-
 $options = array();
-$database = new PDO($dsn, $username, $password, $options);
+try {
+    $database = new PDO($dsn, $username, $password, $options);
+} 
+catch (PDOException $e) {
+   printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+}
 
 // ------------------------------------------------------------------
 echo ("<h2>Exécuter une requete</h2>");
@@ -119,22 +123,6 @@ echo ("</ul>");
 
 // pas de tuple avec 2000 dans la table des vins .....
 
-// ------------------------------------------------------------------
-echo ("<h2>Exécuter une requete resultat est un objet Vin </h2>");
-// ------------------------------------------------------------------
-
-try {
-    $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $query = "select * from vin where annee = 2019";
-    $statement = $database->prepare($query);
-    $statement->execute();
-    $result = $statement->fetchAll(PDO::FETCH_CLASS, "Vin");
-    print ("<pre>");
-    print_r($result);
-    print ("</pre>");
-} catch (PDOException $e) {
-    printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
-}
 
 
 // ===========================================================================================
