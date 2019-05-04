@@ -1,5 +1,5 @@
 <?php
-include 'Database.php';
+include 'fragmentDatabaseConfig.php';
 include 'fragmentHeader.html';
 ?>
 <body>
