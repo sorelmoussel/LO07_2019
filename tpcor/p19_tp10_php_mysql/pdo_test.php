@@ -57,7 +57,7 @@ while ($tuple = $statement->fetch()) {
 }
 echo ("</ul>");
 
-// -------------------
+// ------------------------------------------------------------------
 echo ("<h3>Parametre nommés :</h3>");
 $query = "select * from vin where annee = :an and degre = :dg";
 $statement = $database->prepare($query);
