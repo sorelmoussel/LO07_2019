@@ -49,11 +49,6 @@ session_start();
 
                 <a href="analyse_superglobales.php">Analyse surperGlobales</a>
             </div>            
-
-
-
-
-
     </body>
 </html>
 
