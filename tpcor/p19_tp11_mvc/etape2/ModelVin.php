@@ -1,11 +1,16 @@
 <?php
 
+/* A chaque creation d'un Vin, il y a définition de l'attribut $database 
+
+require_once 'Model.php';
+
 class ModelVin extends Model {
 
     private $id, $cru, $annee, $degre;
 
     // pas possible d'avoir 2 constructeurs
     public function __construct($id = NULL, $cru = NULL, $annee = NULL, $degre = NULL) {
+        echo ("ModelVin:constructeur");
         parent::__construct();
         // valeurs nulles si pas de passage de parametres
         if (!is_null($id)) {
@@ -14,7 +19,6 @@ class ModelVin extends Model {
             $this->annee = $annee;
             $this->degre = $degre;
         }
-        echo ("ModelVin:constructeur");
     }
 
     function setId($id) {
@@ -66,7 +70,7 @@ class ModelVin extends Model {
             echo ("ModelVin:readAll:query = $query");
             $statement = $this->database->prepare($query);
             $statement->execute();
-            $liste_vins = $statement->fetchAll(PDO::FETCH_CLASS, "Vin");
+            $liste_vins = $statement->fetchAll(PDO::FETCH_CLASS, "ModelVin");
             return $liste_vins;
         } catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());

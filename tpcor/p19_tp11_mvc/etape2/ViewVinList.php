@@ -1,5 +1,5 @@
 <?php
-require 'ModelVin.php';
+require_once 'ModelVin.php';
 include 'fragmentHeader.html';
 ?>
 
@@ -17,11 +17,27 @@ include 'fragmentHeader.html';
             <p>C'est la meilleure cave de la région ....</p>
         </div>
         <p/>
-        
-        
-        <?php
-        include 'fragmentVinResultats.php';
-        ?>
-        
+
+
+        <table class = "table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th scope = "col">id</th>
+                    <th scope = "col">cru</th>
+                    <th scope = "col">année</th>
+                    <th scope = "col">degré</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php
+                //print_r($liste_vins);
+                foreach ($liste_vins as $mv) {
+                    printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $mv->getId(), $mv->getCru(), $mv->getAnnee(), $mv->getDegre());
+                }
+                ?>
+            </tbody>
+        </table>
+
     </div>
     <?php include 'fragmentFooter.html'; ?>
