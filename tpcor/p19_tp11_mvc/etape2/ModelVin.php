@@ -1,10 +1,12 @@
 <?php
 
 class ModelVin extends Model {
+
     private $id, $cru, $annee, $degre;
-    
+
     // pas possible d'avoir 2 constructeurs
     public function __construct($id = NULL, $cru = NULL, $annee = NULL, $degre = NULL) {
+        parent::__construct();
         // valeurs nulles si pas de passage de parametres
         if (!is_null($id)) {
             $this->id = $id;
@@ -12,6 +14,7 @@ class ModelVin extends Model {
             $this->annee = $annee;
             $this->degre = $degre;
         }
+        echo ("ModelVin:constructeur");
     }
 
     function setId($id) {
@@ -56,19 +59,19 @@ class ModelVin extends Model {
         printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $this->getId(), $this->getCru(), $this->getAnnee(), $this->getDegre());
     }
 
-    
     // retourne une liste d'objets Vin
-    public static function readAll() {
+    public function readAll() {
         try {
             $query = "select * from vin";
+            echo ("ModelVin:readAll:query = $query");
             $statement = $this->database->prepare($query);
             $statement->execute();
             $liste_vins = $statement->fetchAll(PDO::FETCH_CLASS, "Vin");
             return $liste_vins;
-
         } catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return NULL;
         }
     }
+
 }

@@ -9,6 +9,7 @@ class Model extends PDO {
         $username = 'root';
         $password = 'root';
         $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+        echo ("Model:constructeur");
         try {
             $this->database = new PDO($dsn, $username, $password, $options);
         } catch (PDOException $e) {

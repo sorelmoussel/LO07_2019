@@ -1,12 +1,15 @@
-// ================================================================
-// le controleur de nos rèves 
-// controleur ne connait pas la base de données
-// le controleur ne fait pratiquement pas de HTML
+
 
 <?php
+echo ("A");
 require_once 'ModelVin.php';
-$liste_vins = ModelVin::readAll();
+echo ("B");
+$modelV = new ModelVin();
+echo ("C");
+$liste_vins = $modelV-->readAll();
+echo ("D");
 require 'ViewVinList.php';
+echo ("E");
 ?>
 
 
