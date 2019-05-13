@@ -1,5 +1,7 @@
 <?php
+
 require_once 'ModelVin.php';
+
 include 'fragmentHeader.html';
 ?>
 
@@ -31,8 +33,9 @@ include 'fragmentHeader.html';
             <tbody>
 
                 <?php
-                //print_r($liste_vins);
-                foreach ($liste_vins as $mv) {
+                // La liste des vins est dans une variable $results
+                
+                foreach ($results as $mv) {
                     printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $mv->getId(), $mv->getCru(), $mv->getAnnee(), $mv->getDegre());
                 }
                 ?>

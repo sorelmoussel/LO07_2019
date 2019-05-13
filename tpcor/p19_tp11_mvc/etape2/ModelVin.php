@@ -1,17 +1,14 @@
 <?php
 
-/* A chaque creation d'un Vin, il y a définition de l'attribut $database 
+require_once 'SModel.php';
 
-require_once 'Model.php';
-
-class ModelVin extends Model {
+class ModelVin {
 
     private $id, $cru, $annee, $degre;
 
     // pas possible d'avoir 2 constructeurs
     public function __construct($id = NULL, $cru = NULL, $annee = NULL, $degre = NULL) {
         echo ("ModelVin:constructeur");
-        parent::__construct();
         // valeurs nulles si pas de passage de parametres
         if (!is_null($id)) {
             $this->id = $id;
@@ -64,18 +61,75 @@ class ModelVin extends Model {
     }
 
     // retourne une liste d'objets Vin
-    public function readAll() {
+    public static function readAll() {
         try {
+            $database = SModel::getInstance();
             $query = "select * from vin";
             echo ("ModelVin:readAll:query = $query");
-            $statement = $this->database->prepare($query);
+            $statement = $database->prepare($query);
             $statement->execute();
-            $liste_vins = $statement->fetchAll(PDO::FETCH_CLASS, "ModelVin");
-            return $liste_vins;
+            $results = $statement->fetchAll(PDO::FETCH_CLASS, "ModelVin");
+            return $results;
         } catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return NULL;
         }
     }
 
+    // retourne une liste des id
+    public static function readAllId() {
+        try {
+            $database = SModel::getInstance();
+            $query = "select id from vin";
+            echo ("ModelVin:readAllId:query = $query");
+            $statement = $database->prepare($query);
+            $statement->execute();
+            $results = array();
+            while ($tuple = $statement->fetch()) {
+                $results[] = $tuple[0];
+            }
+            return $results;
+        } catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return NULL;
+        }
+    }
+
+    // retourne le vin de l'id fourni
+    public static function read($id) {
+        try {
+            $database = SModel::getInstance();
+            $query = "select * from vin where id = :id";
+            echo ("ModelVin:readAll:query = $query");
+            $statement = $database->prepare($query);
+            $statement->execute([
+                'id' => $id
+            ]);
+            $list_vins = $statement->fetchAll(PDO::FETCH_CLASS, "ModelVin");
+            return $list_vins;
+        } catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return NULL;
+        }
+    }
+
+    // retourne un formulaire pour creer un vin
+    public static function insert($id, $cru, $annee, $degre) {
+        try {
+            $database = SModel::getInstance();
+            $query = "insert into vin value (:id, :cru, :annee, :degre)";
+            echo ("ModelVin:readAll:insert = $query");
+            $statement = $database->prepare($query);
+            $statement->execute([
+                'id' => $id,
+                'cru' => $cru,
+                'annee' => $annee,
+                'degre' => $degre
+            ]);
+            return TRUE;
+        } catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
 }
