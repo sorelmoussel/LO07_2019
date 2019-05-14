@@ -2,11 +2,9 @@
 
 class SModel extends PDO {
     private static $_instance;
-
     // Constructeur : héritage public obligatoire par héritage de PDO
     public function __construct() {   
     }
-
     //Singleton
     public static function getInstance() {
         echo ("getInstance");
@@ -24,5 +22,8 @@ class SModel extends PDO {
         }
         return self::$_instance;
     }
-     
 }
+
+
+
+
