@@ -23,8 +23,16 @@ include 'fragmentHeader.html';
         <!-- ===================================================== -->
         <!-- ===================================================== -->
 
-        <h2>Le nouveau vin a été ajouté </h2>
-        <h3><?php echo ($_GET['id']); ?> </h3>
+        <?php
+        if ($results) {
+            echo ("<h2>Le nouveau vin a été ajouté </h2>");
+            echo ("<h3>id = " . $_GET['id'] . "</h3>");
+        } else {
+            echo ("<h2>Problème d'insertion du Vin</h2>");
+            echo ("<h3>id = " . $_GET['id'] . "</h3>");
+        }
+        include ('fragmentFooter.html');
+        ?>
+
         
-      
-    <?php include 'fragmentFooter.html'; ?>
+        
