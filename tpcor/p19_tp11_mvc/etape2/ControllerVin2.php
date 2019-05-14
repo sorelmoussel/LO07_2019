@@ -15,18 +15,17 @@ class ControllerVin2 {
 
     // Affiche un vin particulier (id)
     public static function read() {
-        echo ("Controller2:IdForm");
+        echo ("Controller2:read");
         require ('viewVinIDForm.php');      
     }
     
     // Affiche un vin particulier (id)
     public static function idFormAction() {
-        echo ("Controller2:read");
+        echo ("Controller2:idFormAction");
         $vin_id = $_GET['id'];
         $results = ModelVin::read($vin_id);
         require 'ViewVinList.php';
     }
-
     
     // Affiche le formulaire de creation d'un vin
     public static function create() {
@@ -37,7 +36,7 @@ class ControllerVin2 {
     // Ajout des données d'un nouveau vin et affiche un message de confirmation
     public static function created() {
         echo ("Controller2:created");
-        ModelVin::insert ($_GET['id'], $_GET['cru'], $_GET['annee'], $_GET['degre']);
+        $results = ModelVin::insert ($_GET['id'], $_GET['cru'], $_GET['annee'], $_GET['degre']);
         require 'ViewVinCreated.php';
     }
 

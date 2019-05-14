@@ -18,14 +18,6 @@ parse_str($query_string, $param);
 // $action contient le nom de la méthode statique recherchée
 $action = $param["action"];
 
-// appel de la méthode statique $action de ControllerVin2
-echo ("Router: action = $action");
-ControllerVin2::$action();
-
-
-
-
-
 switch ($action) {
     case "accueil" :
     case "readAll" :

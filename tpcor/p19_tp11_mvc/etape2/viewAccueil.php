@@ -1,7 +1,6 @@
 <?php
 include 'fragmentHeader.html';
 ?>
-
 <body>
     <div class="container">
         <?php include 'fragmentMenuVin.html'; ?>

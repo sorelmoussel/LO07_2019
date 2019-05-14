@@ -1,8 +1,8 @@
 <?php
 
-require_once 'SModel.php';
+require_once 'Model.php';
 
-class ModelVin {
+class ModelVin extends Model {
 
     private $id, $cru, $annee, $degre;
 
@@ -57,8 +57,7 @@ class ModelVin {
     // liste de méthodes pour générer du HTML .....
 
     public function viewVin() {
-        printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", 
-        $this->getId(), $this->getCru(), $this->getAnnee(), $this->getDegre());
+        printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $this->getId(), $this->getCru(), $this->getAnnee(), $this->getDegre());
     }
 
     // retourne une liste d'objets Vin

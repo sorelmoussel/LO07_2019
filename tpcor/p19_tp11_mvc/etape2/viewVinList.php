@@ -4,7 +4,6 @@ require_once 'ModelVin.php';
 
 include 'fragmentHeader.html';
 ?>
-
 <body>
     <div class="container">
         <?php include 'fragmentMenuVin.html'; ?>
@@ -20,7 +19,6 @@ include 'fragmentHeader.html';
         </div>
         <p/>
 
-
         <table class = "table table-striped table-bordered">
             <thead>
                 <tr>
@@ -31,16 +29,14 @@ include 'fragmentHeader.html';
                 </tr>
             </thead>
             <tbody>
-
                 <?php
-                // La liste des vins est dans une variable $results
-                
+                // La liste des vins est dans une variable $results             
                 foreach ($results as $mv) {
-                    printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $mv->getId(), $mv->getCru(), $mv->getAnnee(), $mv->getDegre());
+                    printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", 
+                    $mv->getId(), $mv->getCru(), $mv->getAnnee(), $mv->getDegre());
                 }
                 ?>
             </tbody>
         </table>
-
     </div>
     <?php include 'fragmentFooter.html'; ?>
