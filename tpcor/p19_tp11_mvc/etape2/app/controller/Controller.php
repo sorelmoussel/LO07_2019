@@ -1,33 +1,33 @@
 <?php
 
-require_once 'ModelVin.php';
+require_once '../model/ModelVin.php';
 
-class ControllerVin2 {
+class Controller {
     
     public static function accueil() {
-        require ('viewAccueil.php');
+        require ('../view/vin/viewAccueil.php');
     }
 
     public static function readAll() {
         $results = ModelVin::readAll();
-        require ('viewVinList.php');
+        require ('../view/vin/viewVinList.php');
     }
 
     // Affiche un vin particulier (id)
     public static function read() {
-        require ('viewVinIDForm.php');      
+        require ('../view/vin/viewVinIDForm.php');      
     }
     
     // Affiche un vin particulier (id)
     public static function idFormAction() {
         $vin_id = $_GET['id'];
         $results = ModelVin::read($vin_id);
-        require 'ViewVinList.php';
+        require '../view/vin/ViewVinList.php';
     }
     
     // Affiche le formulaire de creation d'un vin
     public static function create() {
-        require ('viewVinForm.php'); 
+        require ('../view/vin/viewVinForm.php'); 
     }
 
     // Ajout des données d'un nouveau vin et affiche un message de confirmation
@@ -39,7 +39,7 @@ class ControllerVin2 {
    
     // Ajout des données d'un nouveau vin et affiche un message de confirmation    
     public static function delete() {
-        require ('viewVinIDForm.php');  
+        require ('../view/vin/viewVinIDForm.php');  
     }
 }
 ?>

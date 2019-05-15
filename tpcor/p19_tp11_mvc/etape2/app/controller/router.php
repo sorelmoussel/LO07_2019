@@ -1,7 +1,7 @@
 <?php
 
 include 'config.php';
-require_once 'ControllerVin2.php';
+require_once 'Controller.php';
 
 // récupération de l'action passée dans l'URL
 $query_string = $_SERVER['QUERY_STRING'];
@@ -28,6 +28,6 @@ switch ($action) {
 
 echo ("Router : nom = $nom");
 // appel de la méthode statique $action de ControllerVin2
-ControllerVin2::$action();
+Controller::$action();
 
 
