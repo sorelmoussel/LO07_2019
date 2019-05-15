@@ -26,7 +26,6 @@ switch ($action) {
 }
 
 
-echo ("Router : nom = $nom");
 // appel de la méthode statique $action de ControllerVin2
 Controller::$action();
 

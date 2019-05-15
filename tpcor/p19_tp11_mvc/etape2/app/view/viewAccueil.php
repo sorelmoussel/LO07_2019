@@ -1,9 +1,9 @@
 <?php
-include 'fragmentHeader.html';
+include 'fragment/fragmentHeader.html';
 ?>
 <body>
     <div class="container">
-        <?php include 'fragmentMenuVin.html'; ?>
+        <?php include 'fragment/fragmentMenuVin.html'; ?>
         <!-- Jumbotrom -->
         <div class="panel panel-success">
             <div class="panel-heading">
@@ -16,4 +16,4 @@ include 'fragmentHeader.html';
         </div>
         <p/>
     </div>
-    <?php include 'fragmentFooter.html'; ?>
+    <?php include 'fragment/fragmentFooter.html'; ?>

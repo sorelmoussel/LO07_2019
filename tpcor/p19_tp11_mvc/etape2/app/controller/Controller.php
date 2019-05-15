@@ -5,7 +5,7 @@ require_once '../model/ModelVin.php';
 class Controller {
     
     public static function accueil() {
-        require ('../view/vin/viewAccueil.php');
+        require ('../view/viewAccueil.php');
     }
 
     public static function readAll() {

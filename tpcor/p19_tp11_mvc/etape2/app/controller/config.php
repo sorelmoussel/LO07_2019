@@ -7,3 +7,6 @@ $username = 'root';
 $password = 'root';
 
 
+$p_controller = "app/controller";
+$p_model = "app/model";
+$p_view = "app/view";

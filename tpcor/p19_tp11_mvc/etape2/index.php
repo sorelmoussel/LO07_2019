@@ -1,6 +1,6 @@
 <?php
 
-header('Location: router.php?action=truc');
+header('Location: app/controller/router.php?action=truc');
 
 ?>
 
