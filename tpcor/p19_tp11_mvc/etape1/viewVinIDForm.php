@@ -32,9 +32,8 @@ fragmentHeader.html
 
         <form role="form" method='get' action='router.php'>
             <div class="form-group">
-                <input type="hidden" name='action' value='idFormAction'
-                       <label for="id">id : </label>
-                <select class="form-control" id='id' name='id'>
+                <input type="hidden" name='action' value='idFormAction'>
+                <label for="id">id : </label> <select class="form-control" id='id' name='id' style="width: 100px">
                     <?php
                     foreach ($liste_id as $key => $id) {
                         echo ("<option>$id</option>");

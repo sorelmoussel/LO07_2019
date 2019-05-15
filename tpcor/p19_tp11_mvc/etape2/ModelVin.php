@@ -3,12 +3,10 @@
 require_once 'SModel.php';
 
 class ModelVin {
-
     private $id, $cru, $annee, $degre;
 
     // pas possible d'avoir 2 constructeurs
     public function __construct($id = NULL, $cru = NULL, $annee = NULL, $degre = NULL) {
-        echo ("ModelVin:constructeur");
         // valeurs nulles si pas de passage de parametres
         if (!is_null($id)) {
             $this->id = $id;
@@ -66,7 +64,6 @@ class ModelVin {
         try {
             $database = SModel::getInstance();
             $query = "select * from vin";
-            echo ("ModelVin:readAll:query = $query");
             $statement = $database->prepare($query);
             $statement->execute();
             $results = $statement->fetchAll(PDO::FETCH_CLASS, "ModelVin");
@@ -81,8 +78,7 @@ class ModelVin {
     public static function readAllId() {
         try {
             $database = SModel::getInstance();
-            $query = "select id from vin";
-            echo ("ModelVin:readAllId:query = $query");
+            $query = "select id from vin";       
             $statement = $database->prepare($query);
             $statement->execute();
             $results = array();
@@ -101,7 +97,6 @@ class ModelVin {
         try {
             $database = SModel::getInstance();
             $query = "select * from vin where id = :id";
-            echo ("ModelVin:readAll:query = $query");
             $statement = $database->prepare($query);
             $statement->execute([
                 'id' => $id
@@ -119,7 +114,6 @@ class ModelVin {
         try {
             $database = SModel::getInstance();
             $query = "insert into vin value (:id, :cru, :annee, :degre)";
-            echo ("ModelVin:readAll:insert = $query");
             $statement = $database->prepare($query);
             $statement->execute([
                 'id' => $id,

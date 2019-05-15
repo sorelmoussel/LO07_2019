@@ -1,12 +1,6 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+include 'config.php';
 require_once 'ControllerVin2.php';
 
 // récupération de l'action passée dans l'URL
@@ -31,8 +25,9 @@ switch ($action) {
         $action = "accueil";
 }
 
+
+echo ("Router : nom = $nom");
 // appel de la méthode statique $action de ControllerVin2
-echo ("Router: action = $action");
 ControllerVin2::$action();
 
 
