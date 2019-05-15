@@ -7,7 +7,7 @@ include 'fragmentHeader.html';
         <!-- Jumbotrom -->
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">MVC avec la table des Vins</h3>
+                <h3 class="panel-title">Modèle Vue Contrôleur</h3>
             </div>
         </div> 
         <div class="jumbotron">

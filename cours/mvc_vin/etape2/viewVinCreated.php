@@ -12,7 +12,7 @@ include 'fragmentHeader.html';
 
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">TD PHP et MySQL</h3>
+         <h3 class="panel-title">Modèle Vue Contrôleur</h3>
             </div>
         </div> 
         <div class="jumbotron">
