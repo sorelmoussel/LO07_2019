@@ -22,7 +22,7 @@ class ControllerVin2 {
     public static function idFormAction() {
         $vin_id = $_GET['id'];
         $results = ModelVin::read($vin_id);
-        require 'ViewVinList.php';
+        require 'viewVinList.php';
     }
     
     // Affiche le formulaire de creation d'un vin
@@ -34,7 +34,7 @@ class ControllerVin2 {
     public static function created() {
         // ajouter une validation des informations du formulaire
         $results = ModelVin::insert ($_GET['id'], $_GET['cru'], $_GET['annee'], $_GET['degre']);
-        require 'ViewVinCreated.php';
+        require 'viewVinCreated.php';
     }
    
     // Ajout des données d'un nouveau vin et affiche un message de confirmation    

@@ -1,7 +1,6 @@
 <?php
 
 include 'config.php';
-
 require_($root . '/app/controller/Controller.php');
 
 // récupération de l'action passée dans l'URL

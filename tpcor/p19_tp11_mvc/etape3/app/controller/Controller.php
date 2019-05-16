@@ -1,6 +1,8 @@
 <?php
 
-require_once '../model/ModelVin.php';
+
+include 'config.php';
+
 
 class Controller {
     
