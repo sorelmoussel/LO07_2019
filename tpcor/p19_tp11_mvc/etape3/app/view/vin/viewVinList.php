@@ -1,7 +1,5 @@
-<?php
+<!-- ===== viewVinList BEGIN ===== -->  
 
-include ('../view/fragment/fragmentHeader.html');
-?>
 <body>
     <div class="container">
         <?php include '../view/fragment/fragmentMenuVin.html'; ?>
@@ -36,4 +34,5 @@ include ('../view/fragment/fragmentHeader.html');
             </tbody>
         </table>
     </div>
-    <?php include '../view/fragment/fragmentFooter.html'; ?>
+    
+<!-- ===== viewVinList END ===== -->  

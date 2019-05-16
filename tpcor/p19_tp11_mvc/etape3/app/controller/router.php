@@ -1,7 +1,9 @@
 <?php
 
 include 'config.php';
-require_($root . '/app/controller/Controller.php');
+require ($root . '/app/controller/Controller.php');
+
+include ($root . '/app/view/fragment/fragmentHeader.html');
 
 // récupération de l'action passée dans l'URL
 $query_string = $_SERVER['QUERY_STRING'];
@@ -30,4 +32,4 @@ echo ("Router:action = $action");
 // appel de la méthode statique $action de ControllerVin2
 Controller::$action();
 
-
+include ($root . '/app/view/fragment/fragmentFooter.html');

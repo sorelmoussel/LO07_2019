@@ -1,10 +1,12 @@
-<?php
-include '../view/fragment/fragmentHeader.html';
-?>
+
 <body>
     <div class="container">
 
-        <?php include '../view/fragment/fragmentMenuVin.html'; ?>
+        <?php
+        include '../controller/config.php';
+        include ($root . '/app/view/fragment/fragmentMenuVin.html');
+        ?>
+
 
         <!-- ===================================================== -->
         <!-- Jumbotrom -->
@@ -12,7 +14,7 @@ include '../view/fragment/fragmentHeader.html';
 
         <div class="panel panel-success">
             <div class="panel-heading">
-         <h3 class="panel-title">Modèle Vue Contrôleur</h3>
+                <h3 class="panel-title">Modèle Vue Contrôleur</h3>
             </div>
         </div> 
         <div class="jumbotron">
@@ -31,8 +33,6 @@ include '../view/fragment/fragmentHeader.html';
             echo ("<h2>Problème d'insertion du Vin</h2>");
             echo ("<h3>id = " . $_GET['id'] . "</h3>");
         }
-        include ('../view/fragment/fragmentFooter.html');
         ?>
 
-        
-        
+

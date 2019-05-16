@@ -1,9 +1,11 @@
-<?php
-include '../view/fragment/fragmentHeader.html';
-?>
 <body>
     <div class="container">
-        <?php include '../view/fragment/fragmentMenuVin.html'; ?>
+           
+        <?php
+        include '../controller/config.php';
+        include ($root . '/app/view/fragment/fragmentMenuVin.html');
+        ?>
+       
         <!-- Jumbotrom -->
         <div class="panel panel-success">
             <div class="panel-heading">
@@ -16,4 +18,3 @@ include '../view/fragment/fragmentHeader.html';
         </div>
         <p/>
     </div>
-    <?php include '../view/fragment/fragmentFooter.html'; ?>

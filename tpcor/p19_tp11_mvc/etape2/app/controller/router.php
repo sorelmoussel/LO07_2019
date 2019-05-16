@@ -1,8 +1,7 @@
 <?php
 
 include 'config.php';
-
-require_($root . '/app/controller/Controller.php');
+require ('Controller.php');
 
 // récupération de l'action passée dans l'URL
 $query_string = $_SERVER['QUERY_STRING'];

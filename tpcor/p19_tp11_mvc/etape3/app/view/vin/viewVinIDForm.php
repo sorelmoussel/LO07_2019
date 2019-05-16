@@ -1,11 +1,12 @@
-<?php
 
-include '../view/fragment/fragmentHeader.html';
-?>
 <body>
     <div class="container">
 
-        <?php include '../view/fragment/fragmentMenuVin.html'; ?>
+        <?php
+        include '../controller/config.php';
+        include ($root . '/app/view/fragment/fragmentMenuVin.html');
+        ?>
+
 
         <!-- ===================================================== -->
         <!-- Jumbotrom -->
@@ -13,7 +14,7 @@ include '../view/fragment/fragmentHeader.html';
 
         <div class="panel panel-success">
             <div class="panel-heading">
-fragmentHeader.html
+                fragmentHeader.html
             </div>
         </div> 
         <div class="jumbotron">
@@ -24,17 +25,13 @@ fragmentHeader.html
         <!-- ===================================================== -->
         <!-- ===================================================== -->
 
-        <?php
-        $liste_id = ModelVin::readAllId();
-        //print_r ($liste_id);
-        ?>
 
-        <form role="form" method='get' action='app/controller/router.php'>
+        <form role="form" method='get' action='router.php'>
             <div class="form-group">
                 <input type="hidden" name='action' value='idFormAction'>
                 <label for="id">id : </label> <select class="form-control" id='id' name='id' style="width: 100px">
                     <?php
-                    foreach ($liste_id as $key => $id) {
+                    foreach ($results as $key => $id) {
                         echo ("<option>$id</option>");
                     }
                     ?>
@@ -46,4 +43,3 @@ fragmentHeader.html
         <p/>
     </div>
 
-    <?php include '../view/fragment/fragmentFooter.html'; ?>

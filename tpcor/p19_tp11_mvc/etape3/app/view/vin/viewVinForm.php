@@ -1,6 +1,4 @@
-<?php
-include '../view/fragment/fragmentHeader.html';
-?>
+
 <body>
     <div class="container">
         <?php include '../view/fragment/fragmentMenuVin.html'; ?>
@@ -16,7 +14,7 @@ include '../view/fragment/fragmentHeader.html';
             <p>C'est la meilleure cave de la région ....</p>
         </div>  
         <!-- ===================================================== -->
-        <form role="form" method='get' action='app/controller/router.php'>
+        <form role="form" method='get' action='router.php'>
             <div class="form-group">
                 <input type="hidden" name='action' value='created'>
                 <label for="id">id : </label><input type="text" name='id'>           
@@ -29,7 +27,7 @@ include '../view/fragment/fragmentHeader.html';
         </form>
         <p/>
     </div>
-    <?php include '../view/fragment/fragmentFooter.html'; ?>
+
 
     
     
