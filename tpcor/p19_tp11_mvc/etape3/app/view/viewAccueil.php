@@ -3,7 +3,7 @@
            
         <?php
         include '../controller/config.php';
-        include ($root . '/app/view/fragment/fragmentMenuVin.html');
+        include ($root . '/app/view/fragment/fragmentMenuCave.html');
         ?>
        
         <!-- Jumbotrom -->

@@ -1,23 +1,33 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <ul>
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../controller/router.php?action=accueil">Cave</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIN <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../controller/router.php?action=vinReadAll">Liste des vins</a></li>
+                    <li><a href="../controller/router.php?action=vinRead">Sélection d'un vin (id)</a></li>
+                    <li><a href="../controller/router.php?action=vinCreate">Insertion un vin</a></li>                    
+                </ul>
+            </li>   
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTEUR <span class="caret"></span></a>
+                <ul class="dropdown-menu">            
+                    <li><a href="../controller/router.php?action=producteurReadAll">Liste des producteurs</a></li>
+                    <li><a href="../controller/router.php?action=producteurRead">Sélection d'un producteur (id)</a></li>
+                    <li><a href="../controller/router.php?action=producteurCreate">Insertion d'un producteur</a></li>
+                    <li><a href="../controlle/rrouter.php?action=producteurReadVins">Récoltes d'un producteur (id)</a></li>                   
+                </ul>
+            </li>  
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TP03 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://dev-isi.utt.fr/~brivet/LO07_P19/TP03/tp03_bootstrap.html">Exercice 1</a></li>
+                    <li><a href="https://dev-isi.utt.fr/~brivet/LO07_P19/TP03/tp03_bootstrap_1.html">Exercice 1 - extend</a></li>
+                </ul>
+            </li>      
+        </ul>
     </div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
-</ul>
 </nav>

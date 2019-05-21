@@ -1,4 +1,5 @@
-<!-- ===== viewVinList BEGIN ===== -->  
+<!-- ===== viewProducteurList BEGIN ===== -->  
+<!-- ===== schema = id, nom, prenom, region ===== -->  
 
 <body>
     <div class="container">
@@ -7,12 +8,13 @@
         <?php
         include '../../controller/config.php';
         include ($root . '/app/view/fragment/fragmentMenuCave.html');
+        $current_file_name = basename($_SERVER['PHP_SELF']);
         ?>
 
         <!-- Jumbotrom -->
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">Modèle Vue Contrôleur</h3>
+                <h3 class="panel-title"><?php echo ($current_file_name) ?></h3>
             </div>
         </div> 
         <div class="jumbotron">
@@ -25,16 +27,16 @@
             <thead>
                 <tr>
                     <th scope = "col">id</th>
-                    <th scope = "col">cru</th>
-                    <th scope = "col">année</th>
-                    <th scope = "col">degré</th>
+                    <th scope = "col">nom</th>
+                    <th scope = "col">prenom</th>
+                    <th scope = "col">region</th>
                 </tr>
-            </thead>
+            </thead
             <tbody>
                 <?php
                 // La liste des vins est dans une variable $results             
-                foreach ($results as $mv) {
-                    printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $mv->getId(), $mv->getCru(), $mv->getAnnee(), $mv->getDegre());
+                foreach ($results as $prod) {
+                    printf("<tr><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>", $prod->getId(), $prod->getNom(), $prod->getPrenom(), $prod->getRegion());
                 }
                 ?>
             </tbody>

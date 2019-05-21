@@ -1,55 +1,68 @@
 <?php
 
-require_once "../model/ModelVin.php";
+include_once 'config.php';
+require_once ($root . "/app/model/ModelVin.php");
+require_once ($root . "/app/model/ModelProducteur.php");
 
 class Controller {
 
     public static function accueil() {
-        echo ("Controller:accueil()");
+        include 'config.php';
+        echo ("<li>accueil : BUG = $DEBUG</li>");
+        if ($DEBUG) {
+            echo ("<li>Controller:accueil() avec DEBUG</li>");
+        }
         include 'config.php';
         $vue = $root . '/app/view/viewAccueil.php';
         require ($vue);
     }
 
-    public static function readAll() {
+    public static function vinReadAll() {
         echo ("Controller:readAll()");
-        $results = ModelVin::readAll();
+        $results = ModelVin::vinReadAll();
         include 'config.php';
-        $vue = $root . '/app/view//vin/viewVinList.php';
+        $vue = $root . '/app/view/vin/viewVinList.php';
         echo ("readAll:vue = $vue\n");
         require ($vue);
     }
 
     // Affiche un vin particulier (id)
-    public static function read() {
+    public static function vinRead() {
         include 'config.php';
+        if ($DEBUG)
+            echo ("<li>Controller:vinRead()</li>");
         $results = ModelVin::readAllId();
-        $vue = $root . '/app/view/vin/viewVinIDForm.php';
+        if ($DEBUG)
+            echo ("<li>Controller:ModelVin::readAllId() ok</li>");
+        $vue = $root . '/app/view/vin/viewVinIdForm.php';
         require ($vue);
     }
 
     // Affiche un vin particulier (id)
-    public static function idFormAction() {
+    public static function vinIdFormAction() {
+        include 'config.php';
+        if (DEBUG)
+            echo ("<li>Controller:vinIdFormAction</li>");
         $vin_id = $_GET['id'];
         $results = ModelVin::read($vin_id);
-        include 'config.php';
-        $vue = $root . '/app/view/vin/ViewVinList.php';
+
+        $vue = $root . '/app/view/vin/viewVinList.php';
         require ($vue);
     }
 
     // Affiche le formulaire de creation d'un vin
-    public static function create() {
+    public static function vinCreate() {
         include 'config.php';
         $vue = $root . '/app/view/vin/viewVinForm.php';
         require ($vue);
     }
 
     // Ajout des données d'un nouveau vin et affiche un message de confirmation
-    public static function created() {
+    public static function vinCreated() {
         // ajouter une validation des informations du formulaire
         $results = ModelVin::insert($_GET['id'], $_GET['cru'], $_GET['annee'], $_GET['degre']);
         include 'config.php';
-        $vue = $root . '/app/view/vin/ViewVinCreated.php';
+        $vue = $root . "/app/view/vin/viewVinCreated.php";
         require ($vue);
     }
 
@@ -58,6 +71,27 @@ class Controller {
         include 'config.php';
         $vue = $root . '/app/view/vin/viewVinIDForm.php';
         require ($vue);
+    }
+
+    public static function producteurReadAll() {
+        include 'config.php';
+        if ($DEBUG)
+            echo ("Controller:producteurReadAll()");
+        $results = ModelProducteur::producteurReadAll();
+        $vue = $root . '/app/view/producteur/viewProducteurList.php';
+        require ($vue);
+    }
+
+    public static function producteurRead() {
+        
+    }
+
+    public static function producteurCreate() {
+        
+    }
+
+    public static function producteurReadVins() {
+        
     }
 
 }

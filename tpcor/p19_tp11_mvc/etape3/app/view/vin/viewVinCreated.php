@@ -3,8 +3,8 @@
     <div class="container">
 
         <?php
-        include '../controller/config.php';
-        include ($root . '/app/view/fragment/fragmentMenuVin.html');
+        include '../../controller/config.php';
+        include ($root . '/app/view/fragment/fragmentMenuCave.html');
         ?>
 
 

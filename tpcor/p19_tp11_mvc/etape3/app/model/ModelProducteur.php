@@ -1,52 +1,53 @@
 <?php
 
 require_once 'SModel.php';
+require_once 'SProducteur.php';
 
-class ModelVin {
+class ModelProducteur {
 
-    private $id, $cru, $annee, $degre;
+    private $id, $nom, $prenom, $region;
 
     // pas possible d'avoir 2 constructeurs
-    public function __construct($id = NULL, $cru = NULL, $annee = NULL, $degre = NULL) {
+    public function __construct($id = NULL, $nom = NULL, $prenom = NULL, $region = NULL) {
         // valeurs nulles si pas de passage de parametres
         if (!is_null($id)) {
             $this->id = $id;
-            $this->cru = $cru;
-            $this->annee = $annee;
-            $this->degre = $degre;
+            $this->nom = $nom;
+            $this->prenom = $prenom;
+            $this->region = $region;
         }
-    }
-
-    function setId($id) {
-        $this->id = $id;
-    }
-
-    function setCru($cru) {
-        $this->cru = $cru;
-    }
-
-    function setAnnee($annee) {
-        $this->annee = $annee;
-    }
-
-    function setDegre($degre) {
-        $this->degre = $degre;
     }
 
     function getId() {
         return $this->id;
     }
 
-    function getCru() {
-        return $this->cru;
+    function getNom() {
+        return $this->nom;
     }
 
-    function getAnnee() {
-        return $this->annee;
+    function getPrenom() {
+        return $this->prenom;
     }
 
-    function getDegre() {
-        return $this->degre;
+    function getRegion() {
+        return $this->region;
+    }
+
+    function setId($id) {
+        $this->id = $id;
+    }
+
+    function setNom($nom) {
+        $this->nom = $nom;
+    }
+
+    function setPrenom($prenom) {
+        $this->prenom = $prenom;
+    }
+
+    function setRegion($region) {
+        $this->region = $region;
     }
 
     public function __toString() {
@@ -55,23 +56,8 @@ class ModelVin {
 
     // liste de méthodes pour générer du HTML .....
 
-    public function viewVin() {
-        printf("<tr><td>%d</td><td>%s</td><td>%d</td><td>%.00f</td></tr>", $this->getId(), $this->getCru(), $this->getAnnee(), $this->getDegre());
-    }
-
-    // retourne une liste d'objets Vin
-    public static function vinReadAll() {
-        try {
-            $database = SModel::getInstance();
-            $query = "select * from vin";
-            $statement = $database->prepare($query);
-            $statement->execute();
-            $results = $statement->fetchAll(PDO::FETCH_CLASS, "ModelVin");
-            return $results;
-        } catch (PDOException $e) {
-            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
-            return NULL;
-        }
+    public function viewProducteur() {
+        printf("<tr><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>", $prod->getId(), $prod->getNom(), $prod->getPrenom(), $prod->getRegion());
     }
 
     // retourne une liste des id
@@ -127,4 +113,20 @@ class ModelVin {
             return FALSE;
         }
     }
+
+    // retourne une liste d'objets Producteur
+    public static function producteurReadAll() {
+        try {
+            $database = SModel::getInstance();
+            $query = "select * from producteur";
+            $statement = $database->prepare($query);
+            $statement->execute();
+            $results = $statement->fetchAll(PDO::FETCH_CLASS, "ModelProducteur");
+            return $results;
+        } catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return NULL;
+        }
+    }
+
 }
