@@ -127,18 +127,16 @@ class ModelProducteur {
             return FALSE;
         }
     }
-    
-    
+   
   
-    public static function readRecoltes() {
+    public static function readRecoltes($id) {
         try {
             $database = SModel::getInstance();
-              // pour faire rapide, je fixe l'id du producteur = 1 ! 
             $query = "select cru, region, annee, degre, quantite from producteur, recolte, vin where producteur.id = recolte.producteur_id and vin.id = recolte.vin_id and producteur.id = :id";
             echo ("<li>ModelProducteur:readRecoltes:query = $query</li>");
             $statement = $database->prepare($query);
             $statement->execute([
-              'id' => 1
+              'id' => $id
             ]);
             $list = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $list;

@@ -1,4 +1,5 @@
 <?php
+
 include_once 'config.php';
 //require_once ($root . "/app/model/ModelVin.php");
 require_once ($root . "/app/model/ModelProducteur.php");
@@ -21,18 +22,35 @@ class ControllerProducteur {
         if ($DEBUG)
             echo ("<li>ControllerProducteur:producteurRead()</li>");
         $results = ModelProducteur::readAllId();
+        
+        // passage du non de la méthode cible pour le champ action du formulaire
+        // Solution 1 : producteurReadActionSelect
+        // Solution 2 : producteurReadActionSeVins
+        
+        $target = $params['target']; 
+        
         $vue = $root . '/app/view/producteur/viewProducteurIdForm.php';
         require ($vue);
     }
 
     // Affiche un producteur particulier (id)
-    public static function producteurIdFormAction($params) {
+    public static function producteurReadActionSelect($params) {
         include 'config.php';
         if (DEBUG)
-            echo ("<li>ControllerProducteur:producteurIdFormAction</li>");
+            echo ("<li>ControllerProducteur:producteurReadActionSelect</li>");
         $id = $_GET['id'];
         $results = ModelProducteur::read($id);
         $vue = $root . '/app/view/producteur/viewProducteurList.php';
+        require ($vue);
+    }
+
+    public static function producteurReadActionVins($params) {
+        include 'config.php';
+        if ($DEBUG)
+            echo ("ControllerProducteur:producteurReadActionVins()");
+        $id = $_GET['id'];
+        $results = ModelProducteur::readRecoltes($id);
+        $vue = $root . '/app/view/producteur/viewProducteurVins.php';
         require ($vue);
     }
 
@@ -52,17 +70,7 @@ class ControllerProducteur {
         require ($vue);
     }
 
-    public static function producteurReadVins($params) {
-        include 'config.php';
-        if ($DEBUG) echo ("ControllerProducteur:producteurReadVins()");
-        echo ("Q1");
-        $results = ModelProducteur::readRecoltes();
-        $vue = $root . '/app/view/producteur/viewProducteurVins.php';
-        require ($vue);
-    }
-
 }
 ?>
 
 
- 

@@ -59,8 +59,9 @@ class ControllerVin {
         include 'config.php';
         if (DEBUG)
             echo ("<li>ControllerVin:vinReadActionDelete</li>");
-        $vin_id = $_GET['id'];
-        $results = ModelVin::delete($vin_id);
+        $id = $_GET['id'];
+        $delete = ModelVin::delete($id);
+        $results = ModelVin::vinReadAll();
         $vue = $root . '/app/view/vin/viewVinList.php';
         require ($vue);
     }
@@ -74,7 +75,10 @@ class ControllerVin {
 
     // Ajout des données d'un nouveau vin et affiche un message de confirmation
     public static function vinCreated($params) {
+        
         // ajouter une validation des informations du formulaire
+        // il est aussi possible de retrouver les valeurs dans le $params construit par le routeur2
+        
         $results = ModelVin::insert($_GET['id'], $_GET['cru'], $_GET['annee'], $_GET['degre']);
         include 'config.php';
         $vue = $root . "/app/view/vin/viewVinCreated.php";

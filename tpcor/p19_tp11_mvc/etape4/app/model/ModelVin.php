@@ -127,12 +127,15 @@ class ModelVin {
             return FALSE;
         }
     }
-    
-        // retourne un formulaire pour creer un vin
+
+    // retourne un formulaire pour creer un vin
     public static function delete($id) {
         try {
             $database = SModel::getInstance();
             $query = "delete from vin where id = :id";
+
+            //echo ("<li>ModelVin:delete:query= $query</li>");
+
             $statement = $database->prepare($query);
             $statement->execute([
               'id' => $id,
@@ -143,6 +146,5 @@ class ModelVin {
             return FALSE;
         }
     }
-    
-  
+
 }

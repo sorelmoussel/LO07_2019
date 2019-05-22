@@ -1,6 +1,6 @@
 <?php
 
-$DEBUG = TRUE;
+$DEBUG = FALSE;
 
 $dsn = 'mysql:dbname=LO07_2019;host=localhost;charset=utf8';
 $username = 'root';

@@ -11,7 +11,7 @@
         <!-- Jumbotrom -->
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">viewProducteurVins (avec id du producteur = 1)</h3>
+                <h3 class="panel-title">viewProducteurVins</h3>
             </div>
         </div> 
         <div class="jumbotron">

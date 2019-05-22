@@ -17,8 +17,9 @@
             <p>C'est la meilleure cave de la région ....</p>
         </div>  
         <!-- ===================================================== -->
-        <form role="form" method='get' action='router.php'>
+        <form role="form" method='get' action='router2.php'>
             <div class="form-group">
+                <input type="hidden" name='controller' value='ControllerProducteur'>
                 <input type="hidden" name='action' value='producteurCreated'>
                 <label for="id">id : </label><input type="text" name='id'>           
                 <label for="id">nom : </label><input type="text" name='nom'>                           

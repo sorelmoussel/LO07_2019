@@ -52,8 +52,11 @@ switch ($action) {
     case "vinCreated" :
 
     case "producteurReadAll" :
+        
     case "producteurRead" :
-    case "producteurIdFormAction" :
+    case "producteurReadActionSelect" :        
+    case "producteurReadActionVins" :        
+    
     case "producteurCreate" :
     case "producteurCreated" :
     case "producteurReadVins" :
