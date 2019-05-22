@@ -14,7 +14,7 @@
 
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h3 class="panel-title">viewVinCreated</h3>
+                <h3 class="panel-title">viewProducteurCreated</h3>
             </div>
         </div> 
         <div class="jumbotron">
@@ -27,10 +27,13 @@
 
         <?php
         if ($results) {
-            echo ("<h2>Le nouveau vin a été ajouté </h2>");
+            echo ("<h2>Le nouveau producteur a été ajouté </h2>");
             echo ("<h3>id = " . $_GET['id'] . "</h3>");
+            echo ("<h3>id = " . $_GET['nom'] . "</h3>");
+            echo ("<h3>id = " . $_GET['prenom'] . "</h3>");
+            echo ("<h3>id = " . $_GET['region'] . "</h3>");
         } else {
-            echo ("<h2>Problème d'insertion du Vin</h2>");
+            echo ("<h2>Problème d'insertion du Producteur</h2>");
             echo ("<h3>id = " . $_GET['id'] . "</h3>");
         }
         ?>

@@ -10,7 +10,7 @@ $password = 'root';
 
 // chemin absolu vers le répertoire du projet
 
-$root = "/Applications/MAMP/htdocs/sorel/tpcor/p19_tp11_mvc/etape3";
+$root = "/Applications/MAMP/htdocs/sorel/tpcor/p19_tp11_mvc/etape4";
 if ($DEBUG) echo ("config:root = $root");
 
 
