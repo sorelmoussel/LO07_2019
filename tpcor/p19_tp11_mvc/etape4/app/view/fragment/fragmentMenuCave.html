@@ -1,24 +1,25 @@
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="../controller/router.php?action=accueil">Cave</a>
+            <a class="navbar-brand" href="../controller/router2.php?action=accueil">Cave</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIN <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../controller/router.php?action=vinReadAll">Liste des vins</a></li>
-                    <li><a href="../controller/router.php?action=vinRead">Sélection d'un vin (id)</a></li>
-                    <li><a href="../controller/router.php?action=vinCreate">Insertion un vin</a></li>                    
+                    <li><a href="../controller/router2.php?controller=ControllerVin&action=vinReadAll">Liste des vins</a></li>
+                    <li><a href="../controller/router2.php?controller=ControllerVin&action=vinRead&target=vinReadActionSelect">Sélection d'un vin (id)</a></li>
+                    <li><a href="../controller/router2.php?controller=ControllerVin&action=vinCreate">Insertion un vin</a></li>  
+                    <li><a href="../controller/router2.php?controller=ControllerVin&action=vinRead&target=vinReadActionDelete">">Suppression d'un vin</a></li>                      
                 </ul>
             </li>   
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTEUR <span class="caret"></span></a>
                 <ul class="dropdown-menu">            
-                    <li><a href="../controller/router.php?action=producteurReadAll">Liste des producteurs</a></li>
-                    <li><a href="../controller/router.php?action=producteurRead">Sélection d'un producteur (id)</a></li>
-                    <li><a href="../controller/router.php?action=producteurCreate">Insertion d'un producteur</a></li>
-                    <li><a href="../controller/router.php?action=producteurReadVins">Récoltes d'un producteur (id)</a></li>                   
+                    <li><a href="../controller/router2.php?controller=ControllerProducteur&action=producteurReadAll">Liste des producteurs</a></li>
+                    <li><a href="../controller/router2.php?controller=ControllerProducteur&action=producteurRead">Sélection d'un producteur (id)</a></li>
+                    <li><a href="../controller/router2.php?controller=ControllerProducteur&action=producteurCreate">Insertion d'un producteur</a></li>
+                    <li><a href="../controller/router2.php?controller=ControllerProducteur&php?action=producteurReadVins">Récoltes d'un producteur (id)</a></li>                   
                 </ul>
             </li>         
         </ul>

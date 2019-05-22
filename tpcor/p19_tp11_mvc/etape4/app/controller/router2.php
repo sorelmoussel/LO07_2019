@@ -2,9 +2,15 @@
 
 include_once ("config.php");
 
-echo ("<li>page router.php</li>");
+if ($DEBUG) {
+    echo ("<li>page router2.php</li>");
+}
 
-require_once ($root . '/app/controller/Controller.php');
+//require_once ($root . '/app/controller/Controller.php');
+
+require_once ($root . '/app/controller/ControllerVin.php');
+require_once ($root . '/app/controller/ControllerProducteur.php');
+
 include_once ($root . '/app/view/fragment/fragmentHeader.php');
 
 // récupération de l'action passée dans l'URL
@@ -37,8 +43,11 @@ if ($DEBUG) {
 switch ($action) {
     case "accueil" :
     case "vinReadAll" :
+
     case "vinRead" :
-    case "vinIdFormAction" :
+    case "vinReadActionSelect" :
+    case "vinReadActionDelete" :
+
     case "vinCreate" :
     case "vinCreated" :
 
@@ -60,13 +69,19 @@ if ($DEBUG) {
 }
 
 switch ($controller) {
-    case "ControllerVin" : ControllerVin::$action();
-    case "ControllerProducteur" : ControllerProducteur::$action();
+    case "ControllerVin" :
+        echo ("case controlleur : ControllerVin");
+        ControllerVin::$action($params);
         break;
-    default:
-        ControllerVin::accueil();
-}
 
+    case "ControllerProducteur" :
+        echo ("case controlleur : ControllerProducteur");
+        ControllerProducteur::$action($params);
+        break;
+
+    default:
+        ControllerVin::accueil($params);
+}
 
 include ($root . '/app/view/fragment/fragmentFooter.html');
 

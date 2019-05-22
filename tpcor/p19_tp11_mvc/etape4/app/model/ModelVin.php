@@ -127,4 +127,22 @@ class ModelVin {
             return FALSE;
         }
     }
+    
+        // retourne un formulaire pour creer un vin
+    public static function delete($id) {
+        try {
+            $database = SModel::getInstance();
+            $query = "delete from vin where id = :id";
+            $statement = $database->prepare($query);
+            $statement->execute([
+              'id' => $id,
+            ]);
+            return TRUE;
+        } catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+    
+  
 }
