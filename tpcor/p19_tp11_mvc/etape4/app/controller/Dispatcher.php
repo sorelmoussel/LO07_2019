@@ -1,23 +1,38 @@
 <?php
 
-class Routeur {
+class Dispatcher {
 
-    public $request; // hashtable
+    private static $request; // hashtable
 
     public function __construct($query_string) {
         // récupération de l'action passée dans l'URL
         echo ("<li>Routeur:contruct:url = $query_string</li>");
         $explode_url = explode('/', $query_string);
         $explode_url = array_slice($explode_url, 2); // on supprime le debut
-        
+
         $request['controller'] = $explode_url[0];
-        $request['action'] = $explode_url[1];     
+        $request['action'] = $explode_url[1];
         $request['params'] = array_slice($explode_url, 2); // on supprime les 2 premiers
         echo ("<pre>");
-        print_r($request); 
+        print_r($request);
         $this->request = $request;
     }
+
+    public static function getRequest() {
+                if (!isset(self::$request)) {
+            try {
+                self::$request = new PDO($dsn, $username, $password, $options);
+            } catch (PDOException $e) {
+                printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            }
+        }
+        return self::$_instance;
+        return $this->request;
+    }
+
 }
+
+
 
 /*
 
